@@ -1,4 +1,5 @@
-:root, html[data-theme='light'] {
+:root,
+html[data-theme='light'] {
     --dark: #081e2b;
     --light: #f1faee;
     --mlight: #7ec0e7;
@@ -36,16 +37,29 @@ input[type=checkbox] {
     text-align: justify;
     margin: 0;
     width: 100%;
+    -ms-user-select: none;
     user-select: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
-    -ms-user-select: none;
     -webkit-tap-highlight-color: transparent;
+}
+
+
+
+@keyframes progress {
+    0% {
+        width: 0%
+    }
+
+    100% {
+        width: 100%
+    }
 }
 
 #loader div {
     width: 100%;
+    padding: 0 5%;
     height: 100%;
     font-size: 5em;
     font-family: var(--fontdec);
@@ -60,14 +74,13 @@ input[type=checkbox] {
     justify-content: center;
 }
 
-#pro {
-    font-size: 1.5rem;
+#loader #progress {
+    height: 10%;
+    width: 100%;
+    font-size: .5em;
+    animation: progress 2s ease-in-out;
 }
 
-p {
-    margin: 1% 0;
-    width: 100%;
-}
 
 #loader {
     position: fixed;
@@ -79,12 +92,14 @@ p {
     z-index: 3;
 }
 
-#loader, #content-container.fade {
+#loader,
+#content-container.fade {
     opacity: 1;
-    transition: opacity 1s;
+    transition: opacity ease-in-out 1s;
 }
 
-#loader.fade, #content-container {
+#loader.fade,
+#content-container {
     opacity: 0;
 }
 
@@ -99,6 +114,15 @@ p {
 #_home {
     font-size: 1em;
     padding-left: 2vw;
+}
+
+#pro {
+    font-size: 1.5rem;
+}
+
+p {
+    margin: 1% 0;
+    width: 100%;
 }
 
 #img_7 {
@@ -129,7 +153,8 @@ p {
     flex-wrap: nowrap;
 }
 
-nav div,footer div {
+nav div,
+footer div {
     margin: 1vw 5vw;
     width: 90vw;
     display: flex;
@@ -147,7 +172,8 @@ nav div,footer div {
     background: none;
 }
 
-nav,footer {
+nav,
+footer {
     height: fit-content;
     width: 100vw;
     display: block;
@@ -160,18 +186,25 @@ nav,footer {
     margin: 0;
     top: 0;
 }
-#footer{
-    top:initial;
+
+#footer {
+    top: initial;
     bottom: 0;
 }
-#footer div{
-    justify-content:center;
+
+#footer div {
+    justify-content: center;
 }
-#about, #contact, #timeline, #lorem {
+
+#about,
+#contact,
+#timeline,
+#home {
     min-height: 100vh;
 }
 
-#id1, #contact {
+#id1,
+#contact {
     width: inherit;
     margin: 0 auto;
     display: flex;
@@ -205,7 +238,7 @@ a.contact {
     align-items: center;
 }
 
-#lorem div {
+#home div {
     width: 100%;
     display: inline-flex;
     margin: 0;
@@ -220,7 +253,7 @@ a.contact {
     font-family: var(--bfont);
 }
 
-#lorem div p {
+#home div p {
     width: 100%;
     height: fit-content;
     font-size: 1em;
@@ -254,7 +287,8 @@ svg {
     font-family: var(--fontdec);
 }
 
-#contact div, #about div {
+#contact div,
+#about div {
     display: inline-flex;
     width: 100%;
     margin: auto;
@@ -270,7 +304,8 @@ svg {
     flex-direction: column;
 }
 
-a:hover, #_dark_link:hover {
+a:hover,
+#_dark_link:hover {
     color: var(--mdark);
     fill: var(--mdark);
 }
@@ -305,8 +340,7 @@ a:hover, #_dark_link:hover {
         margin: 0;
     }
 
-    #_dark_link {
-    }
+    #_dark_link {}
 
     #_dark_link {
         margin: 0;
@@ -319,7 +353,8 @@ a:hover, #_dark_link:hover {
         align-items: center;
     }
 
-    nav div,footer div {
+    nav div,
+    footer div {
         display: flex;
         margin-top: 2vw;
     }
@@ -375,7 +410,8 @@ a:hover, #_dark_link:hover {
     }
 
 
-    #lorem div, #about div {
+    #home div,
+    #about div {
         width: 100%;
         display: inline-flex;
         margin: auto;
@@ -383,16 +419,19 @@ a:hover, #_dark_link:hover {
         flex-direction: column;
     }
 
-    #lorem div p, #about div p {
+    #home div p,
+    #about div p {
         width: 100%;
         padding: 0;
     }
 
-    #lorem div img {
+    #home div img {
         padding-bottom: 5%;
     }
 
-    #lorem div img, #lorem div p, #about div p {
+    #home div img,
+    #home div p,
+    #about div p {
         font-size: 1em;
     }
 
