@@ -111,7 +111,7 @@ input[type=checkbox] {
     justify-content: center;
     align-content: center;
     scroll-behavior: smooth;
-    padding-top:  var(--scrolltm,3em);
+    padding-top: var(--scrolltm, 3em);
     scroll-padding-top: var(--scrolltm, 3em);
 }
 
@@ -204,8 +204,32 @@ footer {
 #contact,
 #timeline,
 #home {
-   min-height: 100vh;
+    min-height: 100vh;
+    /* animation: k 20s linear 200;*/
 }
+/* @keyframes k {
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 100%;
+    }
+}
+#home {
+    background: url(/bg-res/home.png);
+}
+
+#about {
+    background: url(/bg-res/about.png);
+}
+
+#contact {
+    background: url(/bg-res/contact.png);
+}
+
+#timeline {
+    background: url(/bg-res/proj.png);
+} */
 
 #id1,
 #contact {
@@ -260,7 +284,7 @@ a.contact {
 
 #home div p {
     width: 100%;
-    /* height: fit-content; */
+    height: fit-content;
     font-size: 1em;
     padding-right: 0;
 }
