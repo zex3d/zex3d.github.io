@@ -60,7 +60,8 @@ function show(Page_id, nav_id) {
 //mobile navigation for menu
 var toggle1 = document.getElementById("id3");
 toggle1.onclick = function () {
-    document.getElementById("h_nav").classList.toggle('fade');
+    var x=document.getElementById("h_nav")
+    x.classList.toggle('fade');
 }
 //home page
 show("home", "_home_link")
