@@ -57,17 +57,12 @@ function show(Page_id, nav_id) {
     document.getElementById("h_nav").classList.toggle('fade')
     nid(nav_id);
 }
-//mobile navigation
+//mobile navigation for menu
 var toggle1 = document.getElementById("id3");
 toggle1.onclick = function () {
     document.getElementById("h_nav").classList.toggle('fade');
 }
 //home page
-
-function sleep(t){
-    return new Promise(resolve=> setTimeout(resolve,t))
-}
-sleep(5000)
 show("home", "_home_link")
 
 //loading screen
