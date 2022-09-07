@@ -30,6 +30,10 @@ input[type=checkbox] {
     visibility: hidden;
 }
 
+.mode {
+    display: contents;
+}
+
 * {
     background-color: var(--light);
     color: var(--dark);
@@ -160,11 +164,18 @@ p {
 nav div,
 footer div {
     margin: 1vw 5vw;
-    width: 90vw;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     align-content: center;
     align-items: center;
+}
+
+div#end {
+    justify-content: end;
+    width: 100%;
+    margin: 0;
+    padding-inline-end: 1em;
 }
 
 #h_nav {
@@ -205,8 +216,9 @@ footer {
 #timeline,
 #home {
     min-height: 100vh;
-    /* animation: k 20s linear 200;*/
+    animation: k 20s linear 200;
 }
+
 /* @keyframes k {
     0%{
         background-position: 0%;
@@ -253,7 +265,7 @@ footer div a {
     display: contents;
 }
 
-a.contact {
+.contact {
     font-size: 18px;
 }
 
@@ -290,7 +302,6 @@ a.contact {
 }
 
 svg {
-    /*fill: var(--dark);*/
     align-items: baseline;
     vertical-align: baseline;
     width: 3.5em;
@@ -412,6 +423,7 @@ a:hover,
         margin: 0;
         justify-content: space-evenly;
         align-items: center;
+        transition: auto;
         /* backdrop-filter: blur(20px) saturate(100%); */
         /* background-color: var(--backd); */
     }
@@ -425,9 +437,9 @@ a:hover,
         height: 2rem;
         border: none;
         fill: var(--dark);
-        margin: 0 auto;
+        margin-inline-end: .5em;
         display: inline-flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: center;
         align-content: center;
     }
@@ -478,12 +490,11 @@ a:hover,
         justify-content: flex-start;
     }
 
-    a.act {
-        background: var(--dark);
+    .act {
         color: var(--light);
     }
 
-    a.contact:hover {
+    .contact:hover {
         color: var(--mdark);
         fill: var(--mdark);
     }
@@ -516,7 +527,7 @@ a:hover,
         margin: 2% auto;
     }
 
-    a.active {
+    .active {
         color: var(--active);
         fill: var(--active);
     }

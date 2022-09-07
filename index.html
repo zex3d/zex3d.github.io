@@ -6,13 +6,16 @@
     <title>home</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="description">
+    <!-- fevicon -->
     <link rel="shortcut icon" href="Resources/favicon-32x32.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css">
-    <script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js?v=6"></script>
-    <link href="/style.css" rel="StyleSheet" />
     <!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- fonts -->
+    <script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js?v=6"></script>
+    <!-- custom script -->
+    <link href="/style.css" rel="StyleSheet" />
+
 </head>
 
 <body onload="ready()">
@@ -30,31 +33,35 @@
                 <img id="img_7" alt="#" src="Resources/favicon-32x32.png" />
                 <span id="_home">Omkar Patel</span>
             </div>
-
-            <button type="button" title="menu" onclick='x()' class="act" id="id3">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path
-                        d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z" />
-                </svg>
-            </button>
-
+            <div id="end">
+                <button type="button" title="menu" onclick='x()' class="act" id="id3">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path
+                            d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z" />
+                    </svg>
+                </button>
+            </div>
             <div class="dropdown-content" id="id1">
                 <div id="h_nav">
                     <span class="hidden"></span>
-                    <a href="javascript:" onclick='show("home","_home_link")' class="nav-link act  active"
+                    <a href="javascript:" onclick='show("home","_home_link")' class="act active"
                         id="_home_link">Home</a>
-                    <a href="javascript:" onclick='show("timeline","_timeline")' class="nav-link act "
+                    <a href="javascript:" onclick='show("timeline","_timeline")' class="act"
                         id="_timeline">Timeline</a>
-                    <a href="javascript:" onclick='show("contact","_contact_link")' class="nav-link act "
+                    <a href="javascript:" onclick='show("contact","_contact_link")' class="act"
                         id="_contact_link">Contact</a>
-                    <a href="javascript:" onclick='show("about","_abt_link")' class="nav-link act "
+                    <a href="javascript:" onclick='show("about","_abt_link")' class="act"
                         id="_abt_link">About</a>
                     <span class="hidden"></span>
                 </div>
-                <button title="Dark/Light Mode" type="button" class="nav-link act" id="_dark_link">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <button title="Dark/Light Mode" type="button" class="act" id="_dark_link">
+                    <svg id="sun" class="mode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                         <path
-                            d="M112.1 454.3c0 6.297 1.816 12.44 5.284 17.69l17.14 25.69c5.25 7.875 17.17 14.28 26.64 14.28h61.67c9.438 0 21.36-6.401 26.61-14.28l17.08-25.68c2.938-4.438 5.348-12.37 5.348-17.7L272 415.1h-160L112.1 454.3zM191.4 .0132C89.44 .3257 16 82.97 16 175.1c0 44.38 16.44 84.84 43.56 115.8c16.53 18.84 42.34 58.23 52.22 91.45c.0313 .25 .0938 .5166 .125 .7823h160.2c.0313-.2656 .0938-.5166 .125-.7823c9.875-33.22 35.69-72.61 52.22-91.45C351.6 260.8 368 220.4 368 175.1C368 78.61 288.9-.2837 191.4 .0132zM192 96.01c-44.13 0-80 35.89-80 79.1C112 184.8 104.8 192 96 192S80 184.8 80 176c0-61.76 50.25-111.1 112-111.1c8.844 0 16 7.159 16 16S200.8 96.01 192 96.01z" />
+                            d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM352 256c0 53-43 96-96 96s-96-43-96-96s43-96 96-96s96 43 96 96zm32 0c0-70.7-57.3-128-128-128s-128 57.3-128 128s57.3 128 128 128s128-57.3 128-128z" />
+                    </svg>
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path
+                            d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z" />
                     </svg>
                 </button>
             </div>
@@ -75,9 +82,77 @@
                 </p>
             </div>
         </div>
-        <div id="timeline" class="one"><p>
-            home Ipsum is simply dummy text of the printing and typesetting industry. home Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Least sheets containing home Ipsum passages, andmore recently with desktop publishing software like Aldus PageMaker including versions of homeIpsum.home Ipsum is simply dummy text of the printing and typesetting industry. home Ipsum has beenthe industry's standard dummy text ever since the 1500s, when an unknown printer took a galleyof type and scrambled it to make a type specimen book. It has survived not only five centuries,but also the leap into electronic typesetting, remaining essentially unchanged. It waspopularised in the 1960s with the release of Least sheets containing home Ipsum passages, andmore recently with desktop publishing software like Aldus PageMaker including versions of homeIpsum.home Ipsum is simply dummy text of the printing and typesetting industry. home Ipsum has beenthe industry's standard dummy text ever since the 1500s, when an unknown printer took a galleyof type and scrambled it to make a type specimen book. It has survived not only five centuries,but also the leap into electronic typesetting, remaining essentially unchanged. It waspopularised in the 1960s with the release of Least sheets containing home Ipsum passages, andmore recently with desktop publishing software like Aldus PageMaker including versions of homeIpsum.home Ipsum is simply dummy text of the printing and typesetting industry. home Ipsum has beenthe industry's standard dummy text ever since the 1500s, when an unknown printer took a galleyof type and scrambled it to make a type specimen book. It has survived not only five centuries,but also the leap into electronic typesetting, remaining essentially unchanged. It waspopularised in the 1960s with the release of Least sheets containing home Ipsum passages, andmore recently with desktop publishing software like Aldus PageMaker including versions of homeIpsum.home Ipsum is simply dummy text of the printing and typesetting industry. home Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Least sheets containing home Ipsum passages, andmore recently with desktop publishing software like Aldus PageMaker including versions of homeIpsum.home Ipsum is simply dummy text of the printing and typesetting industry. home Ipsum has beenthe industry's standard dummy text ever since the 1500s, when an unknown printer took a galleyof type and scrambled it to make a type specimen book. It has survived not only five centuries,but also the leap into electronic typesetting, remaining essentially unchanged. It waspopularised in the 1960s with the release of Least sheets containing home Ipsum passages, andmore recently with desktop publishing software like Aldus PageMaker including versions of homeIpsum.home Ipsum is simply dummy text of the printing and typesetting industry. home Ipsum has beenthe industry's standard dummy text ever since the 1500s, when an unknown printer took a galleyof type and scrambled it to make a type specimen book. It has survived not only five centuries,but also the leap into electronic typesetting, remaining essentially unchanged. It waspopularised in the 1960s with the release of Least sheets containing home Ipsum passages, andmore recently with desktop publishing software like Aldus PageMaker including versions of homeIpsum.home Ipsum is simply dummy text of the printing and typesetting industry. home Ipsum has beenthe industry's standard dummy text ever since the 1500s, when an unknown printer took a galleyof type and scrambled it to make a type specimen book. It has survived not only five centuries,but also the leap into electronic typesetting, remaining essentially unchanged. It waspopularised in the 1960s with the release of Least sheets containing home Ipsum passages, andmore recently with desktop publishing software like Aldus PageMaker including versions of homeIpsum.home Ipsum is simply dummy text of the printing and typesetting industry. home Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Least sheets containing home Ipsum passages, andmore recently with desktop publishing software like Aldus PageMaker including versions of homeIpsum.home Ipsum is simply dummy text of the printing and typesetting industry. home Ipsum has beenthe industry's standard dummy text ever since the 1500s, when an unknown printer took a galleyof type and scrambled it to make a type specimen book. It has survived not only five centuries,but also the leap into electronic typesetting, remaining essentially unchanged. It waspopularised in the 1960s with the release of Least sheets containing home Ipsum passages, andmore recently with desktop publishing software like Aldus PageMaker including versions of homeIpsum.home Ipsum is simply dummy text of the printing and typesetting industry. home Ipsum has beenthe industry's standard dummy text ever since the 1500s, when an unknown printer took a galleyof type and scrambled it to make a type specimen book. It has survived not only five centuries,but also the leap into electronic typesetting, remaining essentially unchanged. It waspopularised in the 1960s with the release of Least sheets containing home Ipsum passages, andmore recently with desktop publishing software like Aldus PageMaker including versions of homeIpsum.home Ipsum is simply dummy text of the printing and typesetting industry. home Ipsum has beenthe industry's standard dummy text ever since the 1500s, when an unknown printer took a galleyof type and scrambled it to make a type specimen book. It has survived not only five centuries,but also the leap into electronic typesetting, remaining essentially unchanged. It waspopularised in the 1960s with the release of Least sheets containing home Ipsum passages, andmore recently with desktop publishing software like Aldus PageMaker including versions of homeIpsum.
-        </p></div>
+        <div id="timeline" class="one">
+            <p>
+                home Ipsum is simply dummy text of the printing and typesetting industry. home Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                release of Least sheets containing home Ipsum passages, andmore recently with desktop publishing
+                software like Aldus PageMaker including versions of homeIpsum.home Ipsum is simply dummy text of the
+                printing and typesetting industry. home Ipsum has beenthe industry's standard dummy text ever since the
+                1500s, when an unknown printer took a galleyof type and scrambled it to make a type specimen book. It
+                has survived not only five centuries,but also the leap into electronic typesetting, remaining
+                essentially unchanged. It waspopularised in the 1960s with the release of Least sheets containing home
+                Ipsum passages, andmore recently with desktop publishing software like Aldus PageMaker including
+                versions of homeIpsum.home Ipsum is simply dummy text of the printing and typesetting industry. home
+                Ipsum has beenthe industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                galleyof type and scrambled it to make a type specimen book. It has survived not only five centuries,but
+                also the leap into electronic typesetting, remaining essentially unchanged. It waspopularised in the
+                1960s with the release of Least sheets containing home Ipsum passages, andmore recently with desktop
+                publishing software like Aldus PageMaker including versions of homeIpsum.home Ipsum is simply dummy text
+                of the printing and typesetting industry. home Ipsum has beenthe industry's standard dummy text ever
+                since the 1500s, when an unknown printer took a galleyof type and scrambled it to make a type specimen
+                book. It has survived not only five centuries,but also the leap into electronic typesetting, remaining
+                essentially unchanged. It waspopularised in the 1960s with the release of Least sheets containing home
+                Ipsum passages, andmore recently with desktop publishing software like Aldus PageMaker including
+                versions of homeIpsum.home Ipsum is simply dummy text of the printing and typesetting industry. home
+                Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in
+                the 1960s with the release of Least sheets containing home Ipsum passages, andmore recently with desktop
+                publishing software like Aldus PageMaker including versions of homeIpsum.home Ipsum is simply dummy text
+                of the printing and typesetting industry. home Ipsum has beenthe industry's standard dummy text ever
+                since the 1500s, when an unknown printer took a galleyof type and scrambled it to make a type specimen
+                book. It has survived not only five centuries,but also the leap into electronic typesetting, remaining
+                essentially unchanged. It waspopularised in the 1960s with the release of Least sheets containing home
+                Ipsum passages, andmore recently with desktop publishing software like Aldus PageMaker including
+                versions of homeIpsum.home Ipsum is simply dummy text of the printing and typesetting industry. home
+                Ipsum has beenthe industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                galleyof type and scrambled it to make a type specimen book. It has survived not only five centuries,but
+                also the leap into electronic typesetting, remaining essentially unchanged. It waspopularised in the
+                1960s with the release of Least sheets containing home Ipsum passages, andmore recently with desktop
+                publishing software like Aldus PageMaker including versions of homeIpsum.home Ipsum is simply dummy text
+                of the printing and typesetting industry. home Ipsum has beenthe industry's standard dummy text ever
+                since the 1500s, when an unknown printer took a galleyof type and scrambled it to make a type specimen
+                book. It has survived not only five centuries,but also the leap into electronic typesetting, remaining
+                essentially unchanged. It waspopularised in the 1960s with the release of Least sheets containing home
+                Ipsum passages, andmore recently with desktop publishing software like Aldus PageMaker including
+                versions of homeIpsum.home Ipsum is simply dummy text of the printing and typesetting industry. home
+                Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in
+                the 1960s with the release of Least sheets containing home Ipsum passages, andmore recently with desktop
+                publishing software like Aldus PageMaker including versions of homeIpsum.home Ipsum is simply dummy text
+                of the printing and typesetting industry. home Ipsum has beenthe industry's standard dummy text ever
+                since the 1500s, when an unknown printer took a galleyof type and scrambled it to make a type specimen
+                book. It has survived not only five centuries,but also the leap into electronic typesetting, remaining
+                essentially unchanged. It waspopularised in the 1960s with the release of Least sheets containing home
+                Ipsum passages, andmore recently with desktop publishing software like Aldus PageMaker including
+                versions of homeIpsum.home Ipsum is simply dummy text of the printing and typesetting industry. home
+                Ipsum has beenthe industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                galleyof type and scrambled it to make a type specimen book. It has survived not only five centuries,but
+                also the leap into electronic typesetting, remaining essentially unchanged. It waspopularised in the
+                1960s with the release of Least sheets containing home Ipsum passages, andmore recently with desktop
+                publishing software like Aldus PageMaker including versions of homeIpsum.home Ipsum is simply dummy text
+                of the printing and typesetting industry. home Ipsum has beenthe industry's standard dummy text ever
+                since the 1500s, when an unknown printer took a galleyof type and scrambled it to make a type specimen
+                book. It has survived not only five centuries,but also the leap into electronic typesetting, remaining
+                essentially unchanged. It waspopularised in the 1960s with the release of Least sheets containing home
+                Ipsum passages, andmore recently with desktop publishing software like Aldus PageMaker including
+                versions of homeIpsum.
+            </p>
+        </div>
         <div id="contact" class="one">
             <div>
                 <a href="#github" class="contact">
@@ -126,7 +201,7 @@
         </div>
         <div id="about" class="one">
             <div>
-                <img alt="#" src="Resources/favicon-32x32.png" />
+                <img alt="#" src="/Resources/015 - Copy.jpg" />
                 <p>
                     home Ipsum is simply dummy text of the printing and typesetting industry. home Ipsum has been
                     the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley

@@ -63,6 +63,11 @@ toggle1.onclick = function () {
     document.getElementById("h_nav").classList.toggle('fade');
 }
 //home page
+
+function sleep(t){
+    return new Promise(resolve=> setTimeout(resolve,t))
+}
+sleep(5000)
 show("home", "_home_link")
 
 //loading screen
@@ -75,7 +80,15 @@ function ready() {
     loader.style.display = "none";
 }
 // night dark and light mode preferance
+function cool(mode) {
+    var y = document.getElementById("_dark_link").getElementsByTagName("svg");
+    for (i = 0; i < y.length; i++) {
+        document.getElementById(y[i].id).classList.toggle('mode')
+    }
+}
+//^mode switcher
 var toggle = document.getElementById("_dark_link");
+
 var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
 if (storedTheme)
     document.documentElement.setAttribute('data-theme', storedTheme)
@@ -84,11 +97,13 @@ toggle.onclick = function () {
     var targetTheme = "light";
     if (currentTheme === "light") {
         targetTheme = "dark";
+        cool("moon");
     }
+    else { cool("sun"); }
     document.documentElement.setAttribute('data-theme', targetTheme)
     localStorage.setItem('theme', targetTheme);
 }
 //new dynamic padding while scrolling
-const navht=document.querySelector('#header').offsetHeight;
+const navht = document.querySelector('#header').offsetHeight;
 console.log(navht);
-documentElement.style.setProperty('--scrolltm',navht);
+documentElement.style.setProperty('--scrolltm', navht);
