@@ -1,3 +1,4 @@
+
 // navigation bar code and active(old)
 // function show(Page_id, nav_id) {
 //     var x = document.getElementById("content-container").getElementsByClassName("one");
@@ -60,7 +61,7 @@ function show(Page_id, nav_id) {
 //mobile navigation for menu
 var toggle1 = document.getElementById("id3");
 toggle1.onclick = function () {
-    var x=document.getElementById("h_nav")
+    var x = document.getElementById("h_nav")
     x.classList.toggle('fade');
 }
 //home page
@@ -82,6 +83,21 @@ function cool(mode) {
         document.getElementById(y[i].id).classList.toggle('mode')
     }
 }
+//scroll active setting up 
+const links = document.querySelectorAll('.links');
+const sections = document.querySelectorAll('section');
+
+function changeLinkState() {
+    let index = sections.length;
+
+    while (--index && window.scrollY + 50 < sections[index].offsetTop) { }
+
+    links.forEach((link) => link.classList.remove('active'));
+    links[index].classList.add('active');
+}
+
+changeLinkState();
+window.addEventListener('scroll', changeLinkState);
 //^mode switcher
 var toggle = document.getElementById("_dark_link");
 
@@ -103,3 +119,4 @@ toggle.onclick = function () {
 const navht = document.querySelector('#header').offsetHeight;
 console.log(navht);
 documentElement.style.setProperty('--scrolltm', navht);
+
