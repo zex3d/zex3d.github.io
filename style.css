@@ -187,6 +187,7 @@ div#end {
 #h_nav a {
     justify-content: center;
     background: none;
+    margin: 3rem;
 }
 
 nav,
@@ -315,10 +316,6 @@ svg {
     margin-bottom: 2vh;
 }
 
-.hidden {
-    display: none;
-}
-
 #hinav {
     display: none;
 }
@@ -359,9 +356,9 @@ a:hover,
 }
 
 #about div img {
-    width: 12.5%;
+    width: 20rem;
     border-radius: 20%;
-    border: .5em solid;
+    border: 0.5rem solid;
     margin: 0 auto;
 }
 
@@ -421,15 +418,11 @@ a:hover,
         flex-direction: column;
         inset: var(--scrolltm, 2em) 0 0 0;
         margin: 0;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
         /* transition: auto; */
         /* backdrop-filter: blur(20px) saturate(500%); */
         /* background-color: var(--backd); */
-    }
-
-    .hidden {
-        display: flex;
     }
 
     #id3 {
