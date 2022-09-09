@@ -351,10 +351,17 @@ a:hover,
 }
 
 .active {
-    color: var(--active);
+    /* color: var(--active); */
     fill: var(--active);
 }
-
+.active::after{
+    content: "";
+    display: block;
+    height: .1em;
+    width: 100%;
+    transition: ease-in-out 250ms all;
+    background-color: var(--active);
+}
 #about div img {
     width: 20rem;
     border-radius: 20%;
@@ -371,7 +378,11 @@ a:hover,
         font-size: initial;
         padding-left: 1.5vw;
     }
-
+    .active::after{
+        width:.1em;
+        height: 100%;
+        margin-left: 2em;
+    }
     body {
         margin: 0;
         background-color: var(--light);
@@ -529,10 +540,5 @@ a:hover,
         width: 100%;
         margin: 0;
         padding-inline-end: 1em;
-    }
-
-    .active {
-        color: var(--active);
-        fill: var(--active);
     }
 }
