@@ -10,7 +10,6 @@ html[data-theme='light'] {
     --nfont: lora;
     --bfont: inter;
     --fontdec: Goldman;
-    /*     Parisienne,Concert One; */
 }
 
 html[data-theme='dark'] {
@@ -26,15 +25,15 @@ html[data-theme='dark'] {
     --fontdec: Goldman;
 }
 
-input[type=checkbox] {
-    visibility: hidden;
+
+#h_nav a:hover::before {
+    width: 100%;
+    height: .1em;
+    color: var(--mlight);
+    transition: all 250ms linear;
 }
 
-.mode {
-    display: contents;
-}
-
-* {
+body {
     background-color: var(--light);
     color: var(--dark);
     padding: 0;
@@ -137,14 +136,8 @@ p {
 #img_7 {
     width: 1.5em;
     height: 1.5em;
-    border-radius: 50%;
-    margin: 0;
-    padding: 0;
+    border-radius: 20%;
     border: .16em solid var(--dark);
-    display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: space-between;
 }
 
 #id3 {
@@ -184,15 +177,8 @@ div#end {
     display: contents;
 }
 
-#h_nav a {
-    justify-content: center;
-    background: none;
-    margin: 0 1rem;
-}
-
 nav,
 footer {
-    /* height: fit-content; */
     width: 100vw;
     display: block;
     font-weight: bolder;
@@ -260,10 +246,6 @@ a {
     fill: var(--dark);
     text-align: center;
     text-decoration: None;
-    margin: auto 0;
-    display: grid;
-    justify-items: center;
-    align-items: center;
 }
 
 footer div a {
@@ -307,8 +289,6 @@ footer div a {
 }
 
 svg {
-    align-items: baseline;
-    vertical-align: baseline;
     width: 3.5em;
 }
 
@@ -351,17 +331,8 @@ a:hover,
 }
 
 .active {
-    /* color: var(--active); */
+    color: var(--active);
     fill: var(--active);
-}
-
-.active::after {
-    content: "";
-    display: block;
-    height: .1em;
-    width: 100%;
-    transition: ease-in-out 250ms all;
-    background-color: var(--active);
 }
 
 #about div img {
@@ -381,11 +352,11 @@ a:hover,
         padding-left: 1.5vw;
     }
 
+<<<<<<< HEAD
     .active::after,
     .active::before {
-        width: .5em;
-        height: .5em;
-        border-radius: 50%;
+        width: .1em;
+        height: 100%;
     }
 
     .active::before {
@@ -398,12 +369,12 @@ a:hover,
 
     .active::after {
         margin-left: 2em;
-    }
-
+=======
     body {
         margin: 0;
         background-color: var(--light);
         color: var(--dark);
+>>>>>>> ca11b7ab48e4ddc197a7c45cfd52ce76ea39aa2d
     }
 
     #_dark_link {
@@ -420,7 +391,6 @@ a:hover,
     nav div,
     footer div {
         display: flex;
-        /* margin-top: 2vw; */
     }
 
 
