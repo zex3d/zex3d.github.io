@@ -307,9 +307,7 @@ footer div a {
 }
 
 svg {
-    align-items: baseline;
-    vertical-align: baseline;
-    width: 3.5em;
+        width: 3.5em;
 }
 
 .contact svg {
@@ -351,17 +349,8 @@ a:hover,
 }
 
 .active {
-    /* color: var(--active); */
+    color: var(--active);
     fill: var(--active);
-}
-
-.active::after {
-    content: "";
-    display: block;
-    height: .1em;
-    width: 100%;
-    transition: ease-in-out 250ms all;
-    background-color: var(--active);
 }
 
 #about div img {
@@ -379,25 +368,6 @@ a:hover,
     #_home {
         font-size: initial;
         padding-left: 1.5vw;
-    }
-
-    .active::after,
-    .active::before {
-        width: .5em;
-        height: .5em;
-        border-radius: 50%;
-    }
-
-    .active::before {
-        margin-right: 2em;
-        content: "";
-        display: block;
-        transition: ease-in-out 250ms all;
-        background-color: var(--active);
-    }
-
-    .active::after {
-        margin-left: 2em;
     }
 
     body {
