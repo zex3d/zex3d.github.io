@@ -26,15 +26,12 @@ html[data-theme='dark'] {
     --fontdec: Goldman;
 }
 
-input[type=checkbox] {
-    visibility: hidden;
-}
 
 .mode {
     display: contents;
 }
 
-* {
+body {
     background-color: var(--light);
     color: var(--dark);
     padding: 0;
@@ -137,14 +134,8 @@ p {
 #img_7 {
     width: 1.5em;
     height: 1.5em;
-    border-radius: 50%;
-    margin: 0;
-    padding: 0;
+    border-radius: 20%;
     border: .16em solid var(--dark);
-    display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: space-between;
 }
 
 #id3 {
@@ -184,15 +175,8 @@ div#end {
     display: contents;
 }
 
-#h_nav a {
-    justify-content: center;
-    background: none;
-    margin: 0 1rem;
-}
-
 nav,
 footer {
-    /* height: fit-content; */
     width: 100vw;
     display: block;
     font-weight: bolder;
@@ -260,10 +244,6 @@ a {
     fill: var(--dark);
     text-align: center;
     text-decoration: None;
-    margin: auto 0;
-    display: grid;
-    justify-items: center;
-    align-items: center;
 }
 
 footer div a {
@@ -383,9 +363,8 @@ a:hover,
 
     .active::after,
     .active::before {
-        width: .5em;
-        height: .5em;
-        border-radius: 50%;
+        width: .1em;
+        height: 100%;
     }
 
     .active::before {
@@ -398,12 +377,6 @@ a:hover,
 
     .active::after {
         margin-left: 2em;
-    }
-
-    body {
-        margin: 0;
-        background-color: var(--light);
-        color: var(--dark);
     }
 
     #_dark_link {

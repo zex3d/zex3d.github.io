@@ -78,9 +78,7 @@ function ready() {
 // night dark and light mode preferance
 function cool(y, mode) {
     for (i = 0; i < y.length; i++) {
-        console.log(y[i].id + " " + "kk")
         if (y[i].id === mode) {
-            console.log(y[i].id)
             document.getElementById(y[i].id).style.display = "block";
         } else {
             document.getElementById(y[i].id).style.display = "none";
@@ -96,7 +94,6 @@ function changeLinkState() {
     links.forEach((link) => link.classList.remove('active'));
     links[index].classList.add('active');
 }
-
 changeLinkState();
 window.addEventListener('scroll', changeLinkState);
 //^mode switcher

@@ -24,13 +24,62 @@ html[data-theme='dark'] {
     --bfont: inter;
     --fontdec: Goldman;
 }
-*{
-    font-family: var(--fontdec);
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
 }
-.active{
-    color: var(--active);
-}
-nav{
+
+#header,
+.footer {
     position: fixed;
-    inset: 0;
+    width: 100%;
+    padding-inline: 5%;
+    height: 3em;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--nfont);
+    background-color: var(--light);
+    color: var(--dark);
+
+}
+
+span {
+    max-width: 50%;
+}
+
+span>img {
+    width: 2em;
+    border-radius: 50%;
+}
+
+ul {
+    min-width: 50%;
+    margin:auto 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.active {
+    color: var(--active)
+}
+
+.footer {
+    height: 1rem;
+    font-size: .8em;
+    justify-content: center;
+    bottom: 0;
 }
