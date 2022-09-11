@@ -45,6 +45,19 @@ html[data-theme='dark'] {
     padding: 0;
 }
 
+button {
+    padding: 0.1rem 1rem;
+    background: var(--active);
+    /* border: #686868; */
+    border-radius: 0.5em;
+}
+
+div#progress {
+    width: 90%;
+    margin-bottom: 1rem;
+    height: 2rem;
+}
+
 body {
     font-family: var(--nfont);
     background-color: var(--light);
@@ -63,7 +76,7 @@ span>img {
 
 ul {
     min-width: 50%;
-    margin:auto 0;
+    margin: auto 0;
     padding: 0;
 }
 
@@ -75,6 +88,67 @@ li {
 
 .active {
     color: var(--active)
+}
+
+#container {
+    padding-top: var(--scrolltm, 3em);
+    scroll-margin-top: var(--scrolltm, 3em);
+}
+
+@keyframes progress {
+    0% {
+        width: 0%
+    }
+
+    100% {
+        width: 100%
+    }
+}
+
+#loader {
+    position: fixed;
+    left: 0;
+    margin: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+}
+
+#loader div {
+    width: 100%;
+    padding: 0 5%;
+    height: 100%;
+    font-size: 5em;
+    font-family: var(--fontdec);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 5;
+}
+
+#loader div p {
+    display: flex;
+    justify-content: center;
+}
+
+#progress {
+    height: 10%;
+    width: 100%;
+    font-size: .5em;
+    animation: progress 2s ease-in-out;
+}
+
+#loader,
+container.fade {
+    opacity: 1;
+    animation-iteration-count: infinite;
+    transition: opacity ease-in-out 1s;
+}
+
+#loader.fade,
+#container {
+    opacity: 0;
 }
 
 .footer {
