@@ -46,7 +46,6 @@ function nid(nav_id) {
         if (y[i].id === nav_id) {
             if (!document.getElementById(nav_id).classList.contains("active")) {
                 document.getElementById(nav_id).classList.add("active");
-                console.log(nav_id);
             }
         } else {
             document.getElementById(y[i].id).classList.replace("active", "act");
@@ -77,21 +76,23 @@ function ready() {
     loader.style.display = "none";
 }
 // night dark and light mode preferance
-function cool(mode) {
-    var y = document.getElementById("_dark_link").getElementsByTagName("svg");
+function cool(y, mode) {
     for (i = 0; i < y.length; i++) {
-        document.getElementById(y[i].id).classList.toggle('mode')
+        console.log(y[i].id + " " + "kk")
+        if (y[i].id === mode) {
+            console.log(y[i].id)
+            document.getElementById(y[i].id).style.display = "block";
+        } else {
+            document.getElementById(y[i].id).style.display = "none";
+        }
     }
 }
 //scroll active setting up 
 const links = document.querySelectorAll('.links');
 const sections = document.querySelectorAll('section');
-
 function changeLinkState() {
     let index = sections.length;
-
     while (--index && window.scrollY + 50 < sections[index].offsetTop) { }
-
     links.forEach((link) => link.classList.remove('active'));
     links[index].classList.add('active');
 }
@@ -100,23 +101,30 @@ changeLinkState();
 window.addEventListener('scroll', changeLinkState);
 //^mode switcher
 var toggle = document.getElementById("_dark_link");
-
+const y = document.getElementById("_dark_link").getElementsByTagName("svg");
 var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-if (storedTheme)
-    document.documentElement.setAttribute('data-theme', storedTheme)
+//default 
+if (storedTheme) {
+    if (storedTheme === "dark") {
+        cool(y, "moon")
+    } else {
+        cool(y, "sun")
+    }
+}
+//toggle
+document.documentElement.setAttribute('data-theme', storedTheme)
 toggle.onclick = function () {
     var currentTheme = document.documentElement.getAttribute("data-theme");
     var targetTheme = "light";
     if (currentTheme === "light") {
         targetTheme = "dark";
-        cool("moon");
+        cool(y, "moon")
+    } else {
+        cool(y, "sun")
     }
-    else { cool("sun"); }
     document.documentElement.setAttribute('data-theme', targetTheme)
     localStorage.setItem('theme', targetTheme);
 }
 //new dynamic padding while scrolling
 const navht = document.querySelector('#header').offsetHeight;
-console.log(navht);
 documentElement.style.setProperty('--scrolltm', navht);
-
