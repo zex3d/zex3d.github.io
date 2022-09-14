@@ -48,7 +48,7 @@ button{
   
   /* Container around content */
   .container {
-    padding: 10px 40px;
+    padding: 1em;
     position: relative;
     background-color: inherit;
     width: 50%;
@@ -83,10 +83,10 @@ button{
     content: " ";
     height: 0;
     position: absolute;
-    top: 22px;
+    top: 2em;
     width: 0;
     z-index: 1;
-    right: 30px;
+    right: .5em;
     border: medium solid var(--active);
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent var(--mlight);
@@ -138,7 +138,7 @@ button{
     left: 60px;
     border: medium solid var(--active);
     border-width: 10px 10px 10px 0;
-    border-color: transparent var(--active) transparent transparent;
+    border-color: transparent var(--mlight) transparent transparent;
     }
   
     /* Make sure all circles are at the same spot */
