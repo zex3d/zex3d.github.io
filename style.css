@@ -31,7 +31,7 @@ button{
 .timeline {
     position: relative;
     max-width: 1200px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
   }
   
   /* The actual timeline (the vertical ruler) */
@@ -39,7 +39,7 @@ button{
     content: '';
     position: absolute;
     width: 6px;
-    background-color:var(--light);
+    background-color: var(--mlight);
     top: 0;
     bottom: 0;
     left: 50%;
@@ -57,13 +57,12 @@ button{
   
   /* The circles on the timeline */
   .container::after {
-    content: '';
+    /* content: ''; */
     position: absolute;
     width: 25px;
     height: 25px;
     right: -17px;
     background-color: var(--active);
-    border: 4px solid #FF9F55;
     top: 15px;
     border-radius: 50%;
     z-index: 1;
@@ -90,7 +89,7 @@ button{
     right: 30px;
     border: medium solid var(--active);
     border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent var(--active);
+    border-color: transparent transparent transparent var(--mlight);
   }
   
   /* Add arrows to the right container (pointing left) */
@@ -104,7 +103,7 @@ button{
     left: 30px;
     border: medium solid var(--active);
     border-width: 10px 10px 10px 0;
-    border-color: transparent var(--active) transparent transparent;
+    border-color: transparent var(--mlight) transparent transparent;
   }
   
   /* Fix the circle for containers on the right side */
@@ -364,7 +363,7 @@ footer {
 #id1,
 #contact {
     width: inherit;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     display: flex;
 }
 
@@ -429,7 +428,7 @@ svg {
 
 #contact {
     width: 100%;
-    margin: auto;
+    /* margin: auto; */
     display: block;
     font-family: var(--fontdec);
 }
