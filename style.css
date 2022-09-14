@@ -176,6 +176,7 @@ body {
 
 .one {
     padding: 0 5%;
+    margin-block: 1em;
 }
 
 @keyframes progress {
@@ -380,6 +381,7 @@ footer div a {
 
 .contact {
     font-size: 18px;
+    align-items: center;
 }
 
 #id2 {
@@ -638,6 +640,7 @@ a:hover,
         height: 80vh;
         flex-wrap: wrap;
         justify-items: stretch;
+        justify-content: center;
     }
 
     #about div img {

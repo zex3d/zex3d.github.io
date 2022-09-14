@@ -29,6 +29,13 @@ var toggle1 = document.getElementById("id3");
 toggle1.onclick = function () {
     var x = document.getElementById("h_nav")
     x.classList.toggle('fade');
+    //toggle svgs for menu
+    if (document.getElementById("hide").style.display == "none") {
+        cool(menu, "hide");
+    }
+    else {
+        cool(menu, "show");
+    }
 }
 //home page
 show("home", "_home_link")
@@ -66,6 +73,7 @@ window.addEventListener('scroll', changeLinkState);
 //^mode switcher
 var toggle = document.getElementById("_dark_link");
 const y = document.getElementById("_dark_link").getElementsByTagName("svg");
+const menu = document.getElementById("id3").getElementsByTagName("path");
 var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
 //default 
 if (storedTheme) {
@@ -75,6 +83,8 @@ if (storedTheme) {
         cool(y, "sun")
     }
 }
+
+cool(menu, "show")
 //toggle
 document.documentElement.setAttribute('data-theme', storedTheme)
 toggle.onclick = function () {
