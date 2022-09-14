@@ -41,10 +41,10 @@ function pid(Page_id) {
 //         }
 //     }
 // }
-function show(Page_id, nav_id) {
-    pid(Page_id);
-    document.getElementById("h_nav").classList.toggle('fade')
-    // nid(nav_id);
-}
-//home page-default page
-show("home", "_home_link")
+// function show(Page_id, nav_id) {
+//     pid(Page_id);
+//     document.getElementById("h_nav").classList.toggle('fade')
+//     // nid(nav_id);
+// }
+// //home page-default page
+// show("home", "_home_link")
