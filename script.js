@@ -1,4 +1,6 @@
-// navigation bar code and active
+
+const y = document.getElementById("_dark_link").getElementsByTagName("svg");
+const menu = document.getElementById("id3").getElementsByTagName("path");// navigation bar code and active
 function pid(Page_id) {
     var x = document.getElementById("content-container").getElementsByClassName("one");
     for (i = 0; i < x.length; i++) {
@@ -22,6 +24,7 @@ function nid(nav_id) {
 function show(Page_id, nav_id) {
     pid(Page_id);
     document.getElementById("h_nav").classList.toggle('fade')
+    cool(menu, "show")
     nid(nav_id);
 }
 //mobile navigation for menu
@@ -52,11 +55,8 @@ function ready() {
 // night dark and light mode preferance
 function cool(y, mode) {
     for (i = 0; i < y.length; i++) {
-        if (y[i].id === mode) {
-            document.getElementById(y[i].id).style.display = "block";
-        } else {
-            document.getElementById(y[i].id).style.display = "none";
-        }
+        (y[i].id === mode) ?
+            document.getElementById(y[i].id).style.display = "block" : document.getElementById(y[i].id).style.display = "none";
     }
 }
 //scroll active setting up 
@@ -72,19 +72,13 @@ changeLinkState();
 window.addEventListener('scroll', changeLinkState);
 //^mode switcher
 var toggle = document.getElementById("_dark_link");
-const y = document.getElementById("_dark_link").getElementsByTagName("svg");
-const menu = document.getElementById("id3").getElementsByTagName("path");
 var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
 //default 
 if (storedTheme) {
-    if (storedTheme === "dark") {
-        cool(y, "moon")
-    } else {
-        cool(y, "sun")
-    }
+    (storedTheme === "dark") ? cool(y, "moon") : cool(y, "sun")
 }
 
-cool(menu, "show")
+// cool(menu, "show")
 //toggle
 document.documentElement.setAttribute('data-theme', storedTheme)
 toggle.onclick = function () {
@@ -101,4 +95,4 @@ toggle.onclick = function () {
 }
 //new dynamic padding while scrolling
 const navht = document.querySelector('#header').offsetHeight;
-documentElement.style.setProperty('--scrolltm', navht);
+// documentElement.style.setProperty('--scrolltm', navht);
