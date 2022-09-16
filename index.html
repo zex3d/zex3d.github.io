@@ -36,18 +36,16 @@
             <div id="end">
                 <button type="button" title="menu" onclick='x()' class="act" id="id3">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path id="show"
+                        <path
                             d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z" />
-                        <path id="hide"
-                            d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z" />
                     </svg>
                 </button>
             </div>
             <div class="dropdown-content" id="id1">
                 <div id="h_nav">
                     <a href="javascript:" onclick='show("home","_home_link")' class="act links" id="_home_link">Home</a>
-                    <a href="javascript:" onclick='show("Project","_Project")' class="act links"
-                        id="_Project">Project</a>
+                    <a href="javascript:" onclick='show("timeline","_timeline")' class="act links"
+                        id="_timeline">Timeline</a>
                     <a href="javascript:" onclick='show("contact","_contact_link")' class="act links"
                         id="_contact_link">Contact</a>
                     <a href="javascript:" onclick='show("about","_abt_link")' class="act links" id="_abt_link">About</a>
@@ -63,10 +61,12 @@
                     </svg>
                 </button>
             </div>
+
+
         </div>
     </nav>
     <div id="content-container">
-        <section id="home" class="flex">
+        <section id="home" class="one">
             <div>
                 <p>
                     home Ipsum is simply dummy text of the printing and typesetting industry. home Ipsum has been the
@@ -78,57 +78,57 @@
                 </p>
             </div>
         </section>
-        <section id="Project" class="flex timeline">
-            <div class="container left">
-                <div class="content">
-                    <h2>2017</h2>
-                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum,
-                        vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim
-                        per, habeo iusto primis ea eam.</p>
+        <section id="timeline" class="one" class="timeline">
+                <div class="container left">
+                    <div class="content">
+                        <h2>2017</h2>
+                        <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum,
+                            vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim
+                            per, habeo iusto primis ea eam.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="container right">
-                <div class="content">
-                    <h2>2016</h2>
-                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum,
-                        vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim
-                        per, habeo iusto primis ea eam.</p>
+                <div class="container right">
+                    <div class="content">
+                        <h2>2016</h2>
+                        <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum,
+                            vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim
+                            per, habeo iusto primis ea eam.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="container left">
-                <div class="content">
-                    <h2>2015</h2>
-                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum,
-                        vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim
-                        per, habeo iusto primis ea eam.</p>
+                <div class="container left">
+                    <div class="content">
+                        <h2>2015</h2>
+                        <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum,
+                            vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim
+                            per, habeo iusto primis ea eam.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="container right">
-                <div class="content">
-                    <h2>2012</h2>
-                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum,
-                        vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim
-                        per, habeo iusto primis ea eam.</p>
+                <div class="container right">
+                    <div class="content">
+                        <h2>2012</h2>
+                        <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum,
+                            vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim
+                            per, habeo iusto primis ea eam.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="container left">
-                <div class="content">
-                    <h2>2011</h2>
-                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum,
-                        vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim
-                        per, habeo iusto primis ea eam.</p>
+                <div class="container left">
+                    <div class="content">
+                        <h2>2011</h2>
+                        <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum,
+                            vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim
+                            per, habeo iusto primis ea eam.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="container right">
-                <div class="content">
-                    <h2>2007</h2>
-                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum,
-                        vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim
-                        per, habeo iusto primis ea eam.</p>
+                <div class="container right">
+                    <div class="content">
+                        <h2>2007</h2>
+                        <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum,
+                            vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim
+                            per, habeo iusto primis ea eam.</p>
+                    </div>
                 </div>
-            </div>
         </section>
-        <section id="contact" class="flex">
+        <section id="contact" class="one">
             <div>
                 <a href="#github" class="contact">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -174,7 +174,7 @@
                 </a>
             </div>
         </section>
-        <section id="about" class="flex">
+        <section id="about" class="one">
             <div>
                 <img alt="#" src="/Resources/015 - Copy.jpg" />
                 <p>
@@ -197,6 +197,7 @@
         </div>
     </footer>
 </body>
+
 <!--script src="/script.js"></script>-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
