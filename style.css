@@ -24,18 +24,20 @@ html[data-theme='dark'] {
     --bfont: inter;
     --fontdec: Goldman;
 }
-button{
+
+button {
     background: none;
 }
+
 /* The actual timeline (the vertical ruler) */
 .timeline {
     position: relative;
     max-width: 1200px;
     /* margin: 0 auto; */
-  }
-  
-  /* The actual timeline (the vertical ruler) */
-  .timeline::after {
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
     content: '';
     position: absolute;
     width: 1em;
@@ -43,20 +45,21 @@ button{
     top: 0;
     bottom: 0;
     left: 50%;
-    margin-left: -3px;
-  }
-  
-  /* Container around content */
-  .container {
+    margin-left: -0.5em;
+    border-radius: 1em;
+}
+
+/* Container around content */
+.container {
     padding: 10px 40px;
     position: relative;
     background-color: inherit;
     width: 50%;
     margin-inline: 0;
-  }
-  
-  /* The circles on the timeline */
-  .container::after {
+}
+
+/* The circles on the timeline */
+.container::after {
     /* content: ''; */
     position: absolute;
     width: 25px;
@@ -66,34 +69,36 @@ button{
     top: 15px;
     border-radius: 50%;
     z-index: 1;
-  }
-  
-  /* Place the container to the left */
-  .left {
+}
+
+/* Place the container to the left */
+.left {
     left: 0;
-  }
-  
-  /* Place the container to the right */
-  .right {
+    padding-inline-start: 0;
+}
+
+/* Place the container to the right */
+.right {
     left: 50%;
-  }
-  
-  /* Add arrows to the left container (pointing right) */
-  .left::before {
+    padding-inline-end: 0;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
     content: " ";
     height: 0;
     position: absolute;
-    top: 22px;
+    top: 2rem;
     width: 0;
     z-index: 1;
-    right: 30px;
+    right: 2rem;
     border: medium solid var(--active);
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent var(--mlight);
-  }
-  
-  /* Add arrows to the right container (pointing left) */
-  .right::before {
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
     content: " ";
     height: 0;
     position: absolute;
@@ -101,56 +106,60 @@ button{
     width: 0;
     z-index: 1;
     left: 30px;
-    border: medium solid var(--active);
+    border: medium solid var(--mlight);
     border-width: 10px 10px 10px 0;
     border-color: transparent var(--mlight) transparent transparent;
-  }
-  
-  /* Fix the circle for containers on the right side */
-  .right::after {
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
     left: -16px;
-  }
-  
-  /* The actual content */
-  .content {
+}
+
+/* The actual content */
+.content {
     padding: 20px 30px;
     background-color: var(--mlight);
     position: relative;
-    border-radius: 6px;
-  }
-  
-  /* Media queries - Responsive timeline on screens less than 600px wide */
-  @media screen and (max-width: 600px) {
+    border-radius: .5rem;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+
     /* Place the timelime to the left */
     .timeline::after {
-    left: 31px;
+        left: 31px;
     }
-    
+
     /* Full-width containers */
     .container {
-    width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 0;
     }
-    
+
     /* Make sure that all arrows are pointing leftwards */
     .container::before {
-    left: 60px;
-    border: medium solid var(--active);
-    border-width: 10px 10px 10px 0;
-    border-color: transparent var(--active) transparent transparent;
+        left: 60px;
+        border: medium solid var(--mlight);
+        border-width: 10px 10px 10px 0;
+        border-color: transparent
+        var(--mlight) transparent transparent;
     }
-  
+
     /* Make sure all circles are at the same spot */
-    .left::after, .right::after {
-    left: 15px;
+    .left::after,
+    .right::after {
+        left: 15px;
     }
-    
+
     /* Make all right containers behave like the left ones */
     .right {
-    left: 0%;
+        left: 0%;
     }
-  }
+}
+
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////lll////////////////*/
 #h_nav a:hover::before {
     width: 100%;
@@ -379,7 +388,10 @@ footer div a {
 }
 
 .contact {
-    font-size: 18px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 #id2 {
@@ -419,7 +431,8 @@ svg {
 }
 
 .contact svg {
-    margin-bottom: 2vh;
+    /* margin-bottom: 2vh; */
+    flex-direction: column;
 }
 
 #hinav {
@@ -439,6 +452,8 @@ svg {
     width: 100%;
     margin: auto;
     justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
 }
 
 #contact div {
@@ -457,8 +472,11 @@ a:hover,
 }
 
 .active {
-    color: var(--active);
-    fill: var(--active);
+    /* color: var(--active); */
+    border-radius: 1em;
+    background: var(--active);
+    padding-inline: 1rem;
+    /* fill: var(--active); */
 }
 
 #about div img {
@@ -468,6 +486,12 @@ a:hover,
     margin: 0 auto;
 }
 
+@media (max-width: 600px) {
+    #h_nav {
+        flex-direction: column;
+    }
+}
+
 @media (max-width: 800px) {
     * {
         margin: 0;
@@ -475,7 +499,7 @@ a:hover,
 
     #_home {
         font-size: initial;
-        padding-left: 1.5vw;
+        padding-left: 3.5vw;
     }
 
     .active::after,
@@ -483,19 +507,6 @@ a:hover,
         width: .1em;
         height: 100%;
     }
-
-    .active::before {
-        margin-right: 2em;
-        content: "";
-        display: block;
-        transition: ease-in-out 250ms all;
-        background-color: var(--active);
-    }
-
-    .active::after {
-        margin-left: 2em;
-    }
-
     body {
         margin: 0;
         background-color: var(--light);
@@ -508,7 +519,6 @@ a:hover,
     }
 
     #id2 {
-        width: 50%;
         display: flex;
         align-items: center;
     }
@@ -538,8 +548,7 @@ a:hover,
         width: auto;
         height: auto;
         background: var(--dark);
-        flex-direction: column;
-        inset: var(--scrolltm, 2em) 0 0 0;
+        inset: var(--scrolltm, 3rem) 0 0 0;
         margin: 0;
         justify-content: center;
         align-items: center;
@@ -608,6 +617,7 @@ a:hover,
         display: flex;
         margin: .5em;
         justify-content: flex-start;
+        align-items: center;
     }
 
     .act {
