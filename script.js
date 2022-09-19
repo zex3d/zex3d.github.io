@@ -125,3 +125,11 @@ toggle.onclick = function () {
 //new dynamic padding while scrolling
 const navht = document.querySelector('#header').offsetHeight;
 documentElement.style.setProperty('--scrolltm', navht);
+//open
+function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+  }
+  
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }
