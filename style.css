@@ -280,14 +280,16 @@ p {
 }
 
 #_dark_link {
-    width: 2rem;
-    height: 2rem;
-    border: none;
-    fill: var(--dark);
-    display: inline-flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-wrap: nowrap;
+     width: 2rem;
+        height: 2rem;
+        border: none;
+        fill: var(--dark);
+        /* margin-inline-end: .5em; */
+        display: inline-flex;
+        justify-content: flex-end;
+        align-items: center;
+        align-content: center;
+        padding: 0;
 }
 
 nav div,
@@ -428,7 +430,7 @@ footer div a {
 }
 
 svg {
-    width: 3.5em;
+    width: 3.5rem;
 }
 
 .contact svg {
@@ -512,8 +514,7 @@ a:hover,
     }
 
     #_dark_link {
-        margin: 0;
-        height: 2em;
+        /* margin: 0; */
     }
 
     #id2 {
@@ -554,16 +555,17 @@ a:hover,
         /* background-color: var(--backd); */
     }
 
-    #id3 {
+    #id3,#_dark_link {
         width: 2rem;
         height: 2rem;
         border: none;
         fill: var(--dark);
-        margin-inline-end: .5em;
+        /* margin-inline-end: .5em; */
         display: inline-flex;
         justify-content: flex-end;
         align-items: center;
         align-content: center;
+        padding: 0;
     }
 
     #id3:hover {
@@ -634,9 +636,8 @@ a:hover,
         width: 100%;
         margin: auto;
         flex-direction: row;
-        height: 80vh;
+        min-height: 80vh;
         flex-wrap: wrap;
-        justify-items: stretch;
     }
 
     #about div img {
@@ -650,6 +651,6 @@ a:hover,
         justify-content: end;
         width: 100%;
         margin: 0;
-        padding-inline-end: 1em;
+        /* padding-inline-end: 1em; */
     }
 }
