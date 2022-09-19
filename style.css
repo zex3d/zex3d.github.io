@@ -35,7 +35,6 @@ button {
 .timeline {
     position: relative;
     max-width: 100%;
-    /* margin: 0 auto; */
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -62,7 +61,6 @@ button {
 
 /* The circles on the timeline */
 .container::after {
-    /* content: ''; */
     position: absolute;
     width: 25px;
     height: 25px;
@@ -327,7 +325,7 @@ footer {
     margin: 0;
     top: 0;
     padding-block: .5rem;
-    background: antiquewhite;
+    background: var(--light);
 }
 
 #footer {
@@ -474,8 +472,9 @@ a:hover,
 
 .active {
     border-radius: 1em;
-    background: var(--active);
+    background: var(--dark);
     padding-inline: 1rem;
+    color: var(--light);
 }
 
 #about div img {
@@ -545,7 +544,7 @@ a:hover,
         position: fixed;
         width: auto;
         height: auto;
-        background: var(--dark);
+        background: var(--light);
         inset: var(--scrolltm, 3.5rem) 0 0 0;
         margin: 0;
         justify-content: center;
@@ -592,10 +591,6 @@ a:hover,
         padding-bottom: 5%;
     }
 
-    #h_nav a {
-        margin: 3rem;
-    }
-
     #home div img,
     #home div p,
     #about div p {
@@ -616,10 +611,6 @@ a:hover,
         margin: .5em;
         justify-content: flex-start;
         align-items: center;
-    }
-
-    .act {
-        color: var(--light);
     }
 
     .contact:hover {
