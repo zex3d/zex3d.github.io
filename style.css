@@ -398,7 +398,7 @@ footer div a {
 }
 
 #id2 {
-    max-width: 50%;
+    /* max-width: 50%; */
     display: inline-flex;
     text-align: left;
     margin: 0;
@@ -429,9 +429,7 @@ footer div a {
     padding-right: 0;
 }
 
-svg {
-    width: 3.5rem;
-}
+svg {width: 2rem;}
 
 .contact svg {
     flex-direction: column;
@@ -453,7 +451,6 @@ svg {
     width: 100%;
     margin: auto;
     justify-content: space-evenly;
-    align-items: center;
     align-content: center;
 }
 
@@ -513,14 +510,6 @@ a:hover,
         color: var(--dark);
     }
 
-    #_dark_link {
-        /* margin: 0; */
-    }
-
-    #id2 {
-        width: 200%;
-    }
-
     nav div,
     footer div {
         display: flex;
@@ -538,21 +527,31 @@ a:hover,
 
     #h_nav.fade {
         display: none;
+        /* animation: hav 1s ease-in-out reverse; */
     }
 
     #h_nav {
         display: flex;
         position: fixed;
-        width: auto;
-        height: auto;
+        width: 100%;
+        height: 100%;
         background: var(--light);
         inset: var(--scrolltm, 3.5rem) 0 0 0;
         margin: 0;
         justify-content: center;
         align-items: center;
-        /* transition: auto; */
+        animation: hav 1s ease-in-out;
         /* backdrop-filter: blur(20px) saturate(500%); */
         /* background-color: var(--backd); */
+    }
+
+    @keyframes hav {
+        0%{
+            left:100vw
+        }
+        100%{
+            left:0
+        }
     }
 
     #id3,#_dark_link {
@@ -599,13 +598,6 @@ a:hover,
         font-size: 1em;
     }
 
-    #contact {
-        width: 100%;
-        height: 80vh;
-        margin: 0;
-        font-family: var(--fontdec);
-    }
-
     a {
         fill: var(--dark);
         text-align: center;
@@ -632,11 +624,10 @@ a:hover,
     }
 
     #contact div {
-        display: inline-grid;
         width: 100%;
         margin: auto;
-        flex-direction: row;
-        min-height: 80vh;
+        flex-direction: column;
+        min-height: 90vh;
         flex-wrap: wrap;
     }
 
@@ -649,8 +640,8 @@ a:hover,
 
     div#end {
         justify-content: end;
-        width: 100%;
+        min-width: 20%;
         margin: 0;
-        /* padding-inline-end: 1em; */
+        padding-inline-start: 1em;
     }
 }
