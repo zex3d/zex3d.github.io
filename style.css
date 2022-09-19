@@ -28,7 +28,9 @@ html[data-theme='dark'] {
 button {
     background: none;
 }
-
+.clcode{
+    display: flex;
+}
 /* The actual timeline (the vertical ruler) */
 .timeline {
     position: relative;
