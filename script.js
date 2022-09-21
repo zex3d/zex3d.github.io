@@ -24,12 +24,7 @@ function show(Page_id, nav_id) {
     closeNav()
     nid(nav_id);
 }
-//mobile navigation for menu
-/*var toggle1 = document.getElementById("id3");
-toggle1.onclick = function () {
-    var x = document.getElementById("h_nav")
-    x.classList.toggle('fade');
-}*/
+
 //home page
 show("home", "_home_link")
 
@@ -45,11 +40,7 @@ function ready() {
 // night dark and light mode preferance
 function cool(y, mode) {
     for (i = 0; i < y.length; i++) {
-        if (y[i].id === mode) {
-            document.getElementById(y[i].id).style.display = "block";
-        } else {
-            document.getElementById(y[i].id).style.display = "none";
-        }
+        y[i].id === mode ? document.getElementById(y[i].id).style.display = "block" : document.getElementById(y[i].id).style.display = "none";
     }
 }
 //scroll active setting up 
@@ -69,11 +60,7 @@ const y = document.getElementById("_dark_link").getElementsByTagName("svg");
 var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
 //default 
 if (storedTheme) {
-    if (storedTheme === "dark") {
-        cool(y, "moon")
-    } else {
-        cool(y, "sun")
-    }
+    storedTheme === "dark" ? cool(y, "moon") : cool(y, "sun")
 }
 //toggle
 document.documentElement.setAttribute('data-theme', storedTheme)
@@ -92,15 +79,15 @@ toggle.onclick = function () {
 //new dynamic padding while scrolling
 const navht = document.querySelector('#header').offsetHeight;
 documentElement.style.setProperty('--scrolltm', navht);
-//open
+//mobile navigation for menu
 function openNav() {
     document.getElementById("h_nav").style.left = "0%";
-    document.getElementById("open").style.display="none";
-    document.getElementById("close").style.display="flex";
+    document.getElementById("open").style.display = "none";
+    document.getElementById("close").style.display = "flex";
 }
 
 function closeNav() {
     document.getElementById("h_nav").style.left = "100%";
-    document.getElementById("close").style.display="none";
-    document.getElementById("open").style.display="flex";
+    document.getElementById("close").style.display = "none";
+    document.getElementById("open").style.display = "flex";
 }

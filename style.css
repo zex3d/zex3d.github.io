@@ -229,7 +229,7 @@ body {
     top: 0;
     right: 0;
     bottom: 0;
-    z-index: 3;
+    z-index: 5;
 }
 
 #loader,
@@ -553,14 +553,15 @@ a:hover,
         position: fixed;
         width: 100%;
         height: 100%;
+        left:100%;
         background: var(--light);
         inset: var(--scrolltm, 3.5rem) 0 0 0;
         margin: 0;
-        justify-content: center;
         align-items: center;
         transition: all 1s;
         /* backdrop-filter: blur(20px) saturate(500%); */
         /* background-color: var(--backd); */
+        justify-content: flex-start;
     }
 
     .id3,
