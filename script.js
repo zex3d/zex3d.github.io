@@ -1,36 +1,3 @@
-
-// navigation bar code and active(old)
-// function show(Page_id, nav_id) {
-//     var x = document.getElementById("content-container").getElementsByClassName("one");
-//     var y = document.getElementById("h_nav").getElementsByTagName("a")
-//     for (i = 0; i < x.length; i++) {
-//         if (x[i].id === Page_id) {
-//             document.getElementById(Page_id).style.display = "block";
-
-//         } else {
-
-//             document.getElementById(x[i].id).style.display = "none";
-//         }
-//     }
-//     document.getElementById("h_nav").classList.toggle('fade')
-//     for (i = 0; i < y.length; i++) {
-//         if (y[i].id === nav_id) {
-//             if (!document.getElementById(nav_id).classList.contains("active")) {
-//                 document.getElementById(nav_id).classList.add("active")
-//             }
-//         } else {
-//             document.getElementById(y[i].id).classList.replace("active", "act")
-//         }
-//     }
-// }
-
-// new scroll
-// function scrolldiv() {
-//     var elem = document.getElementById("home");
-//     elem.scrollIntoView();
-// }
-
-
 // navigation bar code and active
 function pid(Page_id) {
     var x = document.getElementById("content-container").getElementsByClassName("one");
@@ -54,15 +21,15 @@ function nid(nav_id) {
 }
 function show(Page_id, nav_id) {
     pid(Page_id);
-    document.getElementById("h_nav").classList.toggle('fade')
+    closeNav()
     nid(nav_id);
 }
 //mobile navigation for menu
-var toggle1 = document.getElementById("id3");
+/*var toggle1 = document.getElementById("id3");
 toggle1.onclick = function () {
     var x = document.getElementById("h_nav")
     x.classList.toggle('fade');
-}
+}*/
 //home page
 show("home", "_home_link")
 
@@ -127,9 +94,13 @@ const navht = document.querySelector('#header').offsetHeight;
 documentElement.style.setProperty('--scrolltm', navht);
 //open
 function openNav() {
-    document.getElementById("myNav").style.width = "100%";
-  }
-  
-  function closeNav() {
-    document.getElementById("myNav").style.width = "0%";
-  }
+    document.getElementById("h_nav").style.left = "0%";
+    document.getElementById("open").style.display="none";
+    document.getElementById("close").style.display="flex";
+}
+
+function closeNav() {
+    document.getElementById("h_nav").style.left = "100%";
+    document.getElementById("close").style.display="none";
+    document.getElementById("open").style.display="flex";
+}

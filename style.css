@@ -28,9 +28,11 @@ html[data-theme='dark'] {
 button {
     background: none;
 }
-.clcode{
+
+.clcode {
     display: flex;
 }
+
 /* The actual timeline (the vertical ruler) */
 .timeline {
     position: relative;
@@ -144,8 +146,7 @@ button {
         left: 2.5rem;
         border: medium solid var(--mlight);
         border-width: 10px 10px 10px 0;
-        border-color: transparent
-        var(--mlight) transparent transparent;
+        border-color: transparent var(--mlight) transparent transparent;
     }
 
     /* Make sure all circles are at the same spot */
@@ -194,8 +195,7 @@ body {
 
     100% {
         width: 100%
-    }
-}
+    }}
 
 #loader div {
     width: 100%;
@@ -275,21 +275,21 @@ p {
     border: .16em solid var(--dark);
 }
 
-#id3 {
+.id3 {
     display: none;
 }
 
 #_dark_link {
-     width: 2rem;
-        height: 2rem;
-        border: none;
-        fill: var(--dark);
-        /* margin-inline-end: .5em; */
-        display: inline-flex;
-        justify-content: flex-end;
-        align-items: center;
-        align-content: center;
-        padding: 0;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    fill: var(--dark);
+    /* margin-inline-end: .5em; */
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+    padding: 0;
 }
 
 nav div,
@@ -429,7 +429,9 @@ footer div a {
     padding-right: 0;
 }
 
-svg {width: 2rem;}
+svg {
+    width: 2rem;
+}
 
 .contact svg {
     flex-direction: column;
@@ -451,7 +453,7 @@ svg {width: 2rem;}
     width: 100%;
     margin: auto;
     justify-content: space-evenly;
-    align-content: center;
+    align-items: center;
 }
 
 #contact div {
@@ -495,22 +497,24 @@ a:hover,
         margin: 0;
     }
 
-.cube,.code,.mech {
-    padding-left: .1em;
-}
+    .cube,
+    .code,
+    .mech {
+        padding-left: .1em;
+    }
 
-div#clcode {
-    display: inline-flex;
-    justify-content: space-evenly;
-    width: 100%;
-    height: 3rem;
-    padding-block-end: 1.1em;
-}
+    div#clcode {
+        display: inline-flex;
+        justify-content: space-evenly;
+        width: 100%;
+        height: 3rem;
+        padding-block-end: 1.1em;
+    }
 
-div#clcode>svg {
-    width: 4rem;
-    padding: 0.2em;
-}
+    div#clcode>svg {
+        width: 4rem;
+        padding: 0.2em;
+    }
 
     #_home {
         font-size: initial;
@@ -522,6 +526,7 @@ div#clcode>svg {
         width: .1em;
         height: 100%;
     }
+
     body {
         margin: 0;
         background-color: var(--light);
@@ -543,11 +548,6 @@ div#clcode>svg {
         margin: 0;
     }
 
-    #h_nav.fade {
-        display: none;
-        /* animation: hav 1s ease-in-out reverse; */
-    }
-
     #h_nav {
         display: flex;
         position: fixed;
@@ -558,21 +558,13 @@ div#clcode>svg {
         margin: 0;
         justify-content: center;
         align-items: center;
-        animation: hav 1s ease-in-out;
+        transition: all 1s;
         /* backdrop-filter: blur(20px) saturate(500%); */
         /* background-color: var(--backd); */
     }
 
-    @keyframes hav {
-        0%{
-            left:100vw
-        }
-        100%{
-            left:0
-        }
-    }
-
-    #id3,#_dark_link {
+    .id3,
+    #_dark_link {
         width: 2rem;
         height: 2rem;
         border: none;
@@ -585,7 +577,7 @@ div#clcode>svg {
         padding: 0;
     }
 
-    #id3:hover {
+    .id3:hover {
         color: var(--mdark);
         fill: var(--mdark);
     }

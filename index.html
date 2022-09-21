@@ -36,11 +36,12 @@
             <div class="dropdown-content" id="id1">
                 <div id="h_nav">
                     <a href="javascript:" onclick='show("home","_home_link")' class="act links" id="_home_link">Home</a>
-                    <a href="javascript:" onclick='show("timeline","_timeline")' class="act links"
+                    <a href="javascript:" onclick='show("Project","_timeline")' class="act links"
                         id="_timeline">Timeline</a>
                     <a href="javascript:" onclick='show("contact","_contact_link")' class="act links"
                         id="_contact_link">Contact</a>
                     <a href="javascript:" onclick='show("about","_abt_link")' class="act links" id="_abt_link">About</a>
+
                 </div>
                 <button title="Dark/Light Mode" type="button" class="act" id="_dark_link">
                     <svg id="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -54,10 +55,16 @@
                 </button>
             </div>
             <div id="end">
-                <button type="button" title="menu" onclick='x()' class="act" id="id3">
+                <button id="open" type="button" title="menu_open" onclick='openNav()' class="act id3" id="id3">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                         <path
                             d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z" />
+                    </svg>
+                </button>
+                <button id="close" type="button" title="menu_close" onclick='closeNav()' class="act id3">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 512">
+                        <path
+                            d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z" />
                     </svg>
                 </button>
             </div>
@@ -76,7 +83,7 @@
                 </p>
             </div>
         </section>
-        <section id="timeline" class="one">
+        <section id="Project" class="one">
             <div id="clcode">
                 <svg class="active" id="cube" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                     <path
@@ -214,6 +221,7 @@
                         </li>
                         <li>3D Creation<ul>
                                 <li>Blender (hard-surf, node/math, etc.)</li>
+                            </ul>
                         </li>
                         <li>Video editing</li>
                     </ul>
