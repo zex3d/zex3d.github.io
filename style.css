@@ -177,10 +177,10 @@ body {
     margin: 0;
     width: 100%;
     -ms-user-select: none;
-    user-select: none;
+    -moz-user-select: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
-    -moz-user-select: none;
+    user-select: none;
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -195,7 +195,8 @@ body {
 
     100% {
         width: 100%
-    }}
+    }
+}
 
 #loader div {
     width: 100%;
@@ -304,6 +305,7 @@ footer div {
 }
 
 div#end {
+    overflow: hidden;
     margin: 0;
     width: 0;
 }
@@ -424,7 +426,6 @@ footer div a {
 
 #home div p {
     width: 100%;
-    height: fit-content;
     font-size: 1em;
     padding-right: 0;
 }
@@ -465,6 +466,25 @@ svg {
     flex-direction: column;
 }
 
+#clcode {
+    display: inline-flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 3rem;
+    padding-block-end: 1em;
+    fill: var(--dark);
+}
+
+#clcode>span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#clcode>span>p {
+    padding-inline-start: 1rem;
+}
+
 a:hover,
 #_dark_link:hover {
     color: var(--mdark);
@@ -503,15 +523,7 @@ a:hover,
         padding-left: .1em;
     }
 
-    div#clcode {
-        display: inline-flex;
-        justify-content: space-evenly;
-        width: 100%;
-        height: 3rem;
-        padding-block-end: 1.1em;
-    }
-
-    div#clcode>svg {
+    #clcode>svg {
         width: 4rem;
         padding: 0.2em;
     }
@@ -553,7 +565,7 @@ a:hover,
         position: fixed;
         width: 100%;
         height: 100%;
-        left:100%;
+        left: 100%;
         background: var(--light);
         inset: var(--scrolltm, 3.5rem) 0 0 0;
         margin: 0;

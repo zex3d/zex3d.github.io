@@ -8,9 +8,24 @@
       "default",
       {
         "ignore": [
-          "-webkit-mask-image"
+          "-webkit-mask-image",
+          "-webkit-tap-highlight-color",
+          "scroll-behavior"
         ]
       }
+    ],
+    "axe/forms": [
+      "default",
+      {
+        "label": "off"
+      }
     ]
-  }
+  },
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not and_ff <= 104",
+    "not firefox <= 104",
+    "not safari <= 15.6"
+  ]
 }
