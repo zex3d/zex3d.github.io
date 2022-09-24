@@ -170,7 +170,8 @@ button {
 }
 
 body {
-    background-color: var(--light);
+    /* background-color: var(--light); */
+    background:url(/bg-res/pattern.svg);
     color: var(--dark);
     padding: 0;
     text-align: justify;
@@ -322,7 +323,7 @@ footer {
     display: block;
     font-weight: bolder;
     justify-content: center;
-    font-size: 1.5em;
+    font-size: 1.2rem;
     font-family: var(--nfont);
     position: fixed;
     z-index: 2;
@@ -336,6 +337,15 @@ footer {
     top: initial;
     bottom: 0;
     font-size: small;
+}
+.one {
+    /* background-image: url(/bg-res/Home.svg);
+    background-color: var(--dark); */
+    stroke: var(--dark);
+    stroke-width: 1rem;
+    width: 100%;
+    fill: none;
+    height: auto;
 }
 
 #footer div {
@@ -351,29 +361,15 @@ footer {
     scroll-margin-top: var(--scrolltm, 3em);
 }
 
-/* @keyframes k {
-    0%{
+@keyframes k {
+    0% {
         background-position: 0%;
     }
-    100%{
+
+    100% {
         background-position: 100%;
     }
 }
-#home {
-    background: url(/bg-res/home.png);
-}
-
-#about {
-    background: url(/bg-res/about.png);
-}
-
-#contact {
-    background: url(/bg-res/contact.png);
-}
-
-#Project {
-    background: url(/bg-res/proj.png);
-} */
 
 #id1,
 #contact {
@@ -386,6 +382,10 @@ a {
     fill: var(--dark);
     text-align: center;
     text-decoration: None;
+}
+
+.act {
+    margin: 0 18.14px;
 }
 
 footer div a {
@@ -685,9 +685,7 @@ a:hover,
     }
 
     #about div img {
-        width: 25%;
-        border-radius: 20%;
-        border: .5em solid;
+        width: 50%;
         margin: 2% auto;
     }
 

@@ -99,7 +99,7 @@ function openNav() {
 
 function closeNav() {
     id("h_nav").style.left = "100%";
-    id("close").style.display = "none";
+    id("close").style.display = "none";3
     id("open").style.display = "flex";
 }
 
