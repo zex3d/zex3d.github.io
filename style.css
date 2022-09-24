@@ -338,15 +338,6 @@ footer {
     bottom: 0;
     font-size: small;
 }
-.one {
-    /* background-image: url(/bg-res/Home.svg);
-    background-color: var(--dark); */
-    stroke: var(--dark);
-    stroke-width: 1rem;
-    width: 100%;
-    fill: none;
-    height: auto;
-}
 
 #footer div {
     justify-content: center;
@@ -382,10 +373,6 @@ a {
     fill: var(--dark);
     text-align: center;
     text-decoration: None;
-}
-
-.act {
-    margin: 0 18.14px;
 }
 
 footer div a {
