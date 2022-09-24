@@ -587,10 +587,11 @@ a:hover,
         height: 100%;
         left: 100%;
         background: var(--light);
+        padding-block-end: calc(var(--scrolltm, 3rem)*2);
         inset: var(--scrolltm, 3rem) 0 0 0;
         margin: 0;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: space-evenly;
         align-items: center;
         transition: all 1s;
         /* backdrop-filter: blur(20px) saturate(500%); */
@@ -645,7 +646,7 @@ a:hover,
         fill: var(--dark);
         text-align: center;
         display: flex;
-        margin: .5em;
+        margin: .5rem;
         justify-content: flex-start;
         align-items: center;
     }
