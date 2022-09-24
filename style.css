@@ -322,7 +322,7 @@ footer {
     display: block;
     font-weight: bolder;
     justify-content: center;
-    font-size: 1.5em;
+    font-size: 1.2rem;
     font-family: var(--nfont);
     position: fixed;
     z-index: 2;
@@ -338,6 +338,12 @@ footer {
     font-size: small;
 }
 
+.bg {
+    stroke: var(--dark);
+    stroke-width: 0.05mm;
+    fill: none
+}
+
 #footer div {
     justify-content: center;
 }
@@ -351,29 +357,15 @@ footer {
     scroll-margin-top: var(--scrolltm, 3em);
 }
 
-/* @keyframes k {
-    0%{
+@keyframes k {
+    0% {
         background-position: 0%;
     }
-    100%{
+
+    100% {
         background-position: 100%;
     }
 }
-#home {
-    background: url(/bg-res/home.png);
-}
-
-#about {
-    background: url(/bg-res/about.png);
-}
-
-#contact {
-    background: url(/bg-res/contact.png);
-}
-
-#Project {
-    background: url(/bg-res/proj.png);
-} */
 
 #id1,
 #contact {
@@ -386,6 +378,10 @@ a {
     fill: var(--dark);
     text-align: center;
     text-decoration: None;
+}
+
+.act {
+    margin: 0 18.14px;
 }
 
 footer div a {
@@ -655,9 +651,7 @@ a:hover,
     }
 
     #about div img {
-        width: 25%;
-        border-radius: 20%;
-        border: .5em solid;
+        width: 50%;
         margin: 2% auto;
     }
 
