@@ -170,8 +170,7 @@ button {
 }
 
 body {
-    /* background-color: var(--light); */
-    background:url(/bg-res/pattern.svg);
+    background-color: var(--light); 
     color: var(--dark);
     padding: 0;
     text-align: justify;
@@ -286,7 +285,6 @@ p {
     height: 2rem;
     border: none;
     fill: var(--dark);
-    /* margin-inline-end: .5em; */
     display: inline-flex;
     justify-content: flex-end;
     align-items: center;
@@ -347,7 +345,8 @@ footer {
 #contact,
 #Project,
 #home {
-    min-height: 100vh;
+    /* min-height: 100vh; */
+    padding-block-end: 3rem;
     animation: k 20s linear 200;
     scroll-margin-top: var(--scrolltm, 3em);
 }
@@ -411,42 +410,21 @@ footer div a {
     font-family: var(--bfont);
 }
 
-ul.list {
+ul,li {
+    text-decoration: none;
     list-style: none;
-    display: block;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-}
-
-ul.list * {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-ul.list>li {
-    background: var(--dark);
+    padding-block: .5em;
     color: var(--light);
-    margin-block: .5em;
-    border-radius: 0.5em;
-    flex-direction: column;
-    padding-block: 1em;
-    justify-content: center;
-}
-
-ul.list>li>p {
-    display: none;
-    justify-content: center;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    width: 90%;
     background: var(--mdark);
 }
 
-ul.list>li>div:hover {
-    display: flex;
+ul>li>ul>li {
+    list-style-type: disc;
 }
-ul.list>li:target>p {
-    display: block;
-}
+
 #home div p {
     width: 100%;
     font-size: 1em;
@@ -471,8 +449,7 @@ svg {
     font-family: var(--fontdec);
 }
 
-#contact div,
-#about div {
+#contact div, #about div {
     display: inline-flex;
     width: 100%;
     margin: auto;
@@ -480,11 +457,23 @@ svg {
     align-items: center;
 }
 
-#contact div {
-    height: 70vh;
+#list {
+    display: flex;
+    flex-direction: column;
 }
 
-#about div {
+#list div {
+    display: flex;
+    padding-block: 1rem;
+    border-radius: 1em;
+    flex-direction: column;
+}
+
+#list>div {
+    width: 90%;
+}
+
+#about>div {
     display: flex;
     flex-direction: column;
 }
@@ -528,7 +517,21 @@ a:hover,
     border: 0.5rem solid;
     margin: 0 auto;
 }
+#list>div {
+    height: auto;
+    width: 100%;
+    display: flex;
+}
 
+.list {
+    background: var(--mlight);
+    /* border: aquamarine .2em solid; */
+}
+
+.list:hover {
+    color: var(--mlight);
+    background: var(--dark);
+}
 @media (max-width: 800px) {
     * {
         margin: 0;
@@ -586,11 +589,12 @@ a:hover,
         background: var(--light);
         inset: var(--scrolltm, 3rem) 0 0 0;
         margin: 0;
-        align-items: flex-start;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
         transition: all 1s;
         /* backdrop-filter: blur(20px) saturate(500%); */
         /* background-color: var(--backd); */
-        justify-content: center;
     }
 
     .id3,
@@ -599,7 +603,6 @@ a:hover,
         height: 2rem;
         border: none;
         fill: var(--dark);
-        /* margin-inline-end: .5em; */
         display: inline-flex;
         justify-content: flex-end;
         align-items: center;
@@ -676,18 +679,10 @@ a:hover,
         margin: 2% auto;
     }
 
-    div#end {
+    #end {
         justify-content: center;
         min-width: 20%;
         margin: 0;
         padding-inline-start: 1em;
-    }
-}
-
-@media (max-width: 600px) {
-    #h_nav {
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
     }
 }

@@ -92,6 +92,7 @@
         </section>
         <section id="Project" class="one">
             <div id="clcode">
+                <div>Filter :</div>
                 <span class="active" id="Cube" onclick="time('Cube')">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                         <path
@@ -217,32 +218,65 @@
                 <p>
                     I'm Omkar. I am mechanical engineer. also below skills i have...lol too informal data for testomg.
                 </p>
-                <div>
-                    <h1>Skills</h1>
-                    <ul class="list" id="list">
-                        <li onclick="hidelist(0)">
-                            <div>Computer</div>
-                            <p>MS Word, Excel, PowerPoint.</p>
-                        </li>
-                        <li onclick="hidelist(1)">
-                            <div>Mechanical software</div>
-                            <p>Linkage, Solid works, Creo, MATLAB, Autodesk fusion 360, sci-lab</p>
-                        </li>
-                        <li onclick="hidelist(2)">
-                            <div> Finite element analysis</div>
-                            <p> Motion study in solid works, Different study in solid works and
-                                Autodesk fusion 360, Ansys</p>
-                        </li>
-                        <li onclick="hidelist(3)">
-                            <div>3D Creation</div>
-                            <p>Blender (hard-surf, node/math, etc.)</p>
-                        </li>
-                        <li onclick="hidelist(4)">
-                            <div>Video editing</div>
-                            <p></p>
-                        </li>
-                        
-                    </ul>
+                <div id="list">
+                    <a href="javascript:" onclick="hidelist(20)">
+                        <h1>Skills</h1>
+                    </a>
+                    <div>
+                        <div class="slist" onclick="hidelist(0)">
+                            <div class="list">Microsoft</div>
+                            <ul>
+                                <li>MS Word</li>
+                                <li>MS Excel</li>
+                                <li>MS PowerPoint</li>
+                                <li>MS SharePoint</li>
+                            </ul>
+                        </div>
+                        <div class="slist" onclick="hidelist(1)">
+                            <div class="list">Mechanical</div>
+                            <ul>
+                                <li>Linkage</li>
+                                <li>Solid works</li>
+                                <li>Creo</li>
+                                <li>Autodesk fusion 360</li>
+                                <li>MATLAB,sci-lab</li>
+                            </ul>
+                        </div>
+                        <div class="slist" onclick="hidelist(2)">
+                            <div class="list"> Finite element analysis</div>
+                            <ul>
+                                <li>Motion study in SolidWorks</li>
+                                <li>Different study
+                                    <ul>
+                                        <li>SolidWorks</li>
+                                        <li>Autodesk fusion 360</li>
+                                        <li>Ansys</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="slist" onclick="hidelist(3)">
+                            <div class="list">3D Creation</div>
+                            <ul>
+                                <li>Blender
+                                    <ul>
+                                        <li>Hard-Surf modeling</li>
+                                        <li>Material Creation (procedural)</li>
+                                        <li>Rigging</li>
+                                        <li>Texturing</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="slist" onclick="hidelist(4)">
+                            <div class="list">Hobbies-Softwares</div>
+                            <ul>
+                                <li>figma</li>
+                                <li>Adobe Illustrator</li>
+                                <li>Adobe PhotoShop</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

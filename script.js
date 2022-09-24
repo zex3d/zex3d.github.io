@@ -133,29 +133,22 @@ function time(id1) {
 }
 
 function hidelist(x) {
-    var o = id('list').getElementsByTagName('li')
+    var o = id('list').getElementsByClassName('slist')
     for (i = 0; i < o.length; i++) {
-        (i == x) ? o[i].children[1].style.display = "flex" : o[i].children[1].style.display = "none";
+        (i == x) ? ((o[i].children[1].style.display === "block") ? o[i].children[1].style.display = "none" : o[i].children[1].style.display = "block") : o[i].children[1].style.display = "none";
     }
 }
 //swipe function
-//         if (end > start + offset) {
-//             //a left -> right swipe
-//             openNav()
-//         }
-//         if (end < start - offset) {
-//             //a right -> left swipe
-//             closeNav()
-
-let touchstartX=0
-let touchendX=0
-function chkdir(){
-    (touchstartX>touchendX)?alert('r'):alert('l')
+let touchstartX = 0
+let touchendX = 0
+function chkdir() {
+    (touchstartX > touchendX) ? alert('r') : alert('l')
+        (touchstartX > touchendX) ? openNav() : closeNav()
 }
-document.addEventListener('touchstart',e=>{
-    touchstartX=e.changedTouches[0].screenX
+document.addEventListener('touchstart', e => {
+    touchstartX = e.changedTouches[0].screenX
 })
-document.addEventListener('touchend',e=>{
-    touchendX=e.changedTouches[0].screenX
+document.addEventListener('touchend', e => {
+    touchendX = e.changedTouches[0].screenX
     chkdir()
 })
