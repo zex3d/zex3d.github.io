@@ -131,3 +131,10 @@ function time(id1) {
         }
     }
 }
+
+function dumb(x) {
+    var o = id('list').getElementsByTagName('li')
+    for (i = 0; i < o.length; i++) {
+        (i == x) ? o[i].children[1].style.display = "flex" : o[i].children[1].style.display = "none";
+    }
+}

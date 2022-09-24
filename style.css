@@ -424,6 +424,42 @@ footer div a {
     font-family: var(--bfont);
 }
 
+ul.list {
+    list-style: none;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+ul.list * {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+ul.list>li {
+    background: var(--dark);
+    color: var(--light);
+    margin-block: .5em;
+    border-radius: 0.5em;
+    flex-direction: column;
+    padding-block: 1em;
+    justify-content: center;
+}
+
+ul.list>li>p {
+    display: none;
+    justify-content: center;
+    background: var(--mdark);
+}
+
+ul.list>li>div:hover {
+    display: flex;
+}
+ul.list>li:target>p {
+    display: block;
+}
 #home div p {
     width: 100%;
     font-size: 1em;
@@ -506,12 +542,6 @@ a:hover,
     margin: 0 auto;
 }
 
-@media (max-width: 600px) {
-    #h_nav {
-        flex-direction: column;
-    }
-}
-
 @media (max-width: 800px) {
     * {
         margin: 0;
@@ -567,13 +597,13 @@ a:hover,
         height: 100%;
         left: 100%;
         background: var(--light);
-        inset: var(--scrolltm, 3.5rem) 0 0 0;
+        inset: var(--scrolltm, 3rem) 0 0 0;
         margin: 0;
-        align-items: center;
+        align-items: flex-start;
         transition: all 1s;
         /* backdrop-filter: blur(20px) saturate(500%); */
         /* background-color: var(--backd); */
-        justify-content: flex-start;
+        justify-content: center;
     }
 
     .id3,
@@ -666,5 +696,13 @@ a:hover,
         min-width: 20%;
         margin: 0;
         padding-inline-start: 1em;
+    }
+}
+
+@media (max-width: 600px) {
+    #h_nav {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
     }
 }
