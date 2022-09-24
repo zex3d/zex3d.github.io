@@ -170,7 +170,8 @@ button {
 }
 
 body {
-    background-color: var(--light);
+    /* background-color: var(--light); */
+    background:url(/bg-res/pattern.svg);
     color: var(--dark);
     padding: 0;
     text-align: justify;
@@ -337,11 +338,14 @@ footer {
     bottom: 0;
     font-size: small;
 }
-
-.bg {
+.one {
+    /* background-image: url(/bg-res/Home.svg);
+    background-color: var(--dark); */
     stroke: var(--dark);
-    stroke-width: 0.05mm;
-    fill: none
+    stroke-width: 1rem;
+    width: 100%;
+    fill: none;
+    height: auto;
 }
 
 #footer div {
