@@ -120,10 +120,10 @@ button {
 
 /* The actual content */
 .content {
-    padding: 20px 30px;
+    padding: 0.5rem;
     background-color: var(--mlight);
     position: relative;
-    border-radius: .5rem;
+    border-radius: 1rem;
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
@@ -159,6 +159,11 @@ button {
     .right {
         left: 0%;
     }
+
+    /* filter */
+    #clcode>span>p {
+        display: none;
+    }
 }
 
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////lll////////////////*/
@@ -170,7 +175,7 @@ button {
 }
 
 body {
-    background-color: var(--light); 
+    background-color: var(--light);
     color: var(--dark);
     padding: 0;
     text-align: justify;
@@ -315,6 +320,10 @@ div#end {
     display: contents;
 }
 
+#clcode>span>svg {
+    width: 1.5rem;
+}
+
 nav,
 footer {
     width: 100vw;
@@ -410,7 +419,8 @@ footer div a {
     font-family: var(--bfont);
 }
 
-ul,li {
+ul,
+li {
     text-decoration: none;
     list-style: none;
     padding-block: .5em;
@@ -449,7 +459,8 @@ svg {
     font-family: var(--fontdec);
 }
 
-#contact div, #about div {
+#contact div,
+#about div {
     display: inline-flex;
     width: 100%;
     margin: auto;
@@ -462,15 +473,15 @@ svg {
     flex-direction: column;
 }
 
+div#list>a,#list h1 {
+    margin: 0;
+}
+
 #list div {
     display: flex;
     padding-block: 1rem;
     border-radius: 1em;
     flex-direction: column;
-}
-
-#list>div {
-    width: 90%;
 }
 
 #about>div {
@@ -494,7 +505,7 @@ svg {
 }
 
 #clcode>span>p {
-    padding-inline-start: 1rem;
+    padding-inline-start: .5rem;
 }
 
 a:hover,
@@ -506,7 +517,7 @@ a:hover,
 .active {
     border-radius: 1rem;
     background: var(--dark);
-    padding-inline: 1rem;
+    padding-inline: .5rem;
     color: var(--light);
     fill: var(--light);
 }
@@ -517,10 +528,12 @@ a:hover,
     border: 0.5rem solid;
     margin: 0 auto;
 }
+
 #list>div {
     height: auto;
     width: 100%;
     display: flex;
+    padding: 0;
 }
 
 .list {
@@ -532,10 +545,30 @@ a:hover,
     color: var(--mlight);
     background: var(--dark);
 }
+.phead {
+    display: flex;
+    background: var(--light);
+    width: 100%;
+    min-height: 3rem;
+    justify-content: space-between;
+    border-radius: .5rem;
+    align-items: center;
+}
+
+.phead:hover {
+    color: var(--light);
+    background: var(--dark);
+}
+
+.phead>div {
+    padding-inline: .5em;
+}
 @media (max-width: 800px) {
     * {
         margin: 0;
     }
+
+
 
     .cube,
     .code,

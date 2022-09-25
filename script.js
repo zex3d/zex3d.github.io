@@ -1,6 +1,9 @@
 function id(id) {
     return document.getElementById(id)
 }
+//remove it use less home page
+
+function hh(){document.getElementById('hh').style.display = 'none'}
 // navigation bar code and active
 function pid(Page_id) {
     var x = id("content-container").getElementsByClassName("one");
@@ -14,9 +17,7 @@ function nid(nav_id) {
     var y = id("h_nav").getElementsByTagName("a");
     for (i = 0; i < y.length; i++) {
         if (y[i].id === nav_id) {
-            if (!id(nav_id).classList.contains("active")) {
-                id(nav_id).classList.add("active");
-            }
+            (!id(nav_id).classList.contains("active")) ? id(nav_id).classList.add("active") : ''
         } else {
             id(y[i].id).classList.replace("active", "act");
         }
