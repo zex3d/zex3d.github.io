@@ -3,7 +3,7 @@ function id(id) {
 }
 //remove it use less home page
 
-function hh(){document.getElementById('hh').style.display = 'none'}
+function hh() { document.getElementById('hh').style.display = 'none' }
 // navigation bar code and active
 function pid(Page_id) {
     var x = id("content-container").getElementsByClassName("one");
@@ -132,7 +132,24 @@ function time(id1) {
         }
     }
 }
+function hidesection(o, x) {
 
+}
+function bhide(x) {
+    // var o=id('time').getElementsByClassName('container')[1].getElementsByClassName("content")[0].getElementsByClassName("phead");
+    var o = id('time').getElementsByClassName('container')
+    for (i = 0; i < o.length; i++) {
+        if (i == x) {
+            if (o[i].getElementsByClassName("content")[0].children[1].style.display === "block") {
+                o[i].getElementsByClassName("content")[0].children[1].style.display = "none"
+            } else {
+                o[i].getElementsByClassName("content")[0].children[1].style.display = "block"
+            }
+        } else {
+            o[i].getElementsByClassName("content")[0].children[1].style.display = "none";
+        }
+    }
+}
 function hidelist(x) {
     var o = id('list').getElementsByClassName('slist')
     for (i = 0; i < o.length; i++) {
