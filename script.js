@@ -1,33 +1,41 @@
 function id(id) {
     return document.getElementById(id)
 }
-//remove it use less home page
 
+
+//remove it use less home page
 function hh() { document.getElementById('hh').style.display = 'none' }
+
+
 // navigation bar code and active
 function pid(Page_id) {
-    var x = id("content-container").getElementsByClassName("one");
+    var x = id('c-c').getElementsByTagName('section');
     for (i = 0; i < x.length; i++) {
         if (x[i].id === Page_id) {
             id(Page_id).scrollIntoView();
         }
     }
 }
+
+
 function nid(nav_id) {
     var y = id("h_nav").getElementsByTagName("a");
     for (i = 0; i < y.length; i++) {
         if (y[i].id === nav_id) {
             (!id(nav_id).classList.contains("active")) ? id(nav_id).classList.add("active") : ''
         } else {
-            id(y[i].id).classList.replace("active", "act");
+            id(y[i].id).classList.replace("active", "links");
         }
     }
 }
+
+
 function show(Page_id, nav_id) {
     pid(Page_id);
     closeNav()
     nid(nav_id);
 }
+
 
 //home page
 show("home", "_home_link")
@@ -35,13 +43,13 @@ show("home", "_home_link")
 
 //loading screen
 var loader = id('loader');
-var content = id('content-container');
-
+var content = id('c-c');
 function ready() {
     loader.classList.toggle('fade');
     content.classList.toggle('fade');
     loader.style.display = "none";
 }
+
 
 // night dark and light mode preferance
 function cool(y, mode) {
@@ -49,6 +57,7 @@ function cool(y, mode) {
         y[i].id === mode ? id(y[i].id).style.display = "block" : id(y[i].id).style.display = "none";
     }
 }
+
 
 //scroll active setting up 
 const links = document.querySelectorAll('.links');
@@ -62,15 +71,18 @@ function changeLinkState() {
 changeLinkState();
 window.addEventListener('scroll', changeLinkState);
 
+
 //^mode switcher
-var toggle = id("_dark_link");
-const y = id("_dark_link").getElementsByTagName("svg");
+var toggle = id("dark_link");
+const y = id("dark_link").getElementsByTagName("svg");
 var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+
 
 //default 
 if (storedTheme) {
     storedTheme === "dark" ? cool(y, "moon") : cool(y, "sun")
 }
+
 
 //toggle
 document.documentElement.setAttribute('data-theme', storedTheme)
@@ -87,9 +99,11 @@ toggle.onclick = function () {
     localStorage.setItem('theme', targetTheme);
 }
 
+
 //new dynamic padding while scrolling
-const navht = document.querySelector('#header').offsetHeight;
+const navht = document.querySelector('nav').offsetHeight;
 documentElement.style.setProperty('--scrolltm', navht);
+
 
 //mobile navigation for menu
 function openNav() {
@@ -98,15 +112,16 @@ function openNav() {
     id("close").style.display = "flex";
 }
 
+
 function closeNav() {
     id("h_nav").style.left = "100%";
-    id("close").style.display = "none"; 3
+    id("close").style.display = "none";
     id("open").style.display = "flex";
 }
 
+
 //time-Project
 function time(id1) {
-
     id(id1).classList.toggle('active');
     var z = id('clcode').getElementsByTagName('span');
     var v = 0;
@@ -132,9 +147,8 @@ function time(id1) {
         }
     }
 }
-function hidesection(o, x) {
 
-}
+
 function bhide(x) {
     // var o=id('time').getElementsByClassName('container')[1].getElementsByClassName("content")[0].getElementsByClassName("phead");
     var o = id('time').getElementsByClassName('container')
@@ -150,6 +164,8 @@ function bhide(x) {
         }
     }
 }
+
+
 function hidelist(x) {
     var o = id('list').getElementsByClassName('slist')
     for (i = 0; i < o.length; i++) {
@@ -157,16 +173,16 @@ function hidelist(x) {
     }
 }
 //swipe function
-let touchstartX = 0
-let touchendX = 0
-function chkdir() {
-    (touchstartX > touchendX) ? alert('r') : alert('l')
-        (touchstartX > touchendX) ? openNav() : closeNav()
-}
-document.addEventListener('touchstart', e => {
-    touchstartX = e.changedTouches[0].screenX
-})
-document.addEventListener('touchend', e => {
-    touchendX = e.changedTouches[0].screenX
-    chkdir()
-})
+// let touchstartX = 0
+// let touchendX = 0
+// function chkdir() {
+//     (touchstartX > touchendX) ? alert('r') : alert('l')
+//         (touchstartX > touchendX) ? openNav() : closeNav()
+// }
+// document.addEventListener('touchstart', e => {
+//     touchstartX = e.changedTouches[0].screenX
+// })
+// document.addEventListener('touchend', e => {
+//     touchendX = e.changedTouches[0].screenX
+//     chkdir()
+// })
