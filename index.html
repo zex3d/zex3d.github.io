@@ -104,9 +104,15 @@
                     <p>Mech</p>
                 </span>
             </div>
-            <div onclick="bhide(100)" class="expand">
-                Expand / Collapse
+            <div class="flex" style="justify-content:space-between">
+                <span onclick="bhide('a')" class="expand">
+                    Expand
+                </span>
+                <span onclick="bhide(100)" class="expand">
+                    Collapse
+                </span>
             </div>
+
             <div class="timeline" id="time">
                 <div class="container Cube left">
                     <div class="content">
@@ -243,11 +249,14 @@
                 I'm Omkar. I am mechanical engineer. also below skills i have...lol too informal data for testomg.
             </p>
             <div id="list">
-                <a href="javascript:" >
-                    <h1>Skills</h1>
-                </a>
-                <div onclick="hidelist(100)" class="expand">
-                    Expand / Collapse
+                <h1>Skills</h1>
+                <div class="flex" style="flex-direction:row;">
+                    <span onclick="hidelist('a')" class="expand">
+                        Expand
+                    </span>
+                    <span onclick="hidelist(100)" class="expand">
+                        Collapse
+                    </span>
                 </div>
                 <div>
                     <div class="slist" onclick="hidelist(0)">
