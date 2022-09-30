@@ -164,7 +164,7 @@ function hidelist(x) {
     var o = document.querySelectorAll('.slist');
     (x === 'a') ? o.forEach((link) => link.children[1].style.display = "block") : o.forEach((link) => link.children[1].style.display = "none");
     for (i = 0; i < o.length; i++) {
-        (i == x) ? ((o[i].children[1].style.display === "block")) : '';
+        (i === x) ? (o[i].children[1].style.display = "block") : '';
     }
 }
 //swipe function
