@@ -300,8 +300,9 @@ button {
     background: none;
     fill: var(--dark);
     border: none;
-    padding: 0;
+    padding-inline-end: 0;
     margin: 0;
+    padding-inline-start: 1rem;
 }
 
 #loader,
