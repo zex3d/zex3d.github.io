@@ -117,8 +117,7 @@ nav>div>div>span {
     justify-content: space-between;
 }
 
-.end {
-}
+.end {}
 
 .jcc {
     justify-content: center;
@@ -126,6 +125,7 @@ nav>div>div>span {
 
 .active {
     border-radius: .5rem;
+    padding-inline: 1rem;
     background: var(--dark);
     color: var(--light);
     fill: var(--light);
@@ -415,6 +415,7 @@ section a {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* opacity: .8; */
     height: 2rem;
 }
 
@@ -466,6 +467,10 @@ section>img {
 
     #end {
         display: flex;
+    }
+
+    #contact {
+        flex-direction: column;
     }
 
     .end {
