@@ -147,24 +147,19 @@ function time(id1) {
         }
     }
 }
-
-
-function bhide(x) {
-    // var o=id('time').getElementsByClassName('container')[1].getElementsByClassName("content")[0].getElementsByClassName("phead");
-    const links = document.querySelectorAll('.container');
-    (x === 'a') ? links.forEach((link) => link.getElementsByClassName("content")[0].children[1].style.display = "block") : links.forEach((link) => link.getElementsByClassName("content")[0].children[1].style.display = "none");
-    for (i = 0; i < links.length; i++) {
-        if (i == x) {
-            links[i].getElementsByClassName("content")[0].children[1].style.display = "block"
-        }
+function expand(s, x) {
+    const links = document.querySelectorAll(s);
+    if (x == 'e' || x == 'c') {
+        (x === 'e') ? links.forEach((link) => link.children[1].style.display = "block") : '';
+        (x === 'c') ? links.forEach((link) => link.children[1].style.display = "none") : '';
     }
-}
-
-function hidelist(x) {
-    var o = document.querySelectorAll('.slist');
-    (x === 'a') ? o.forEach((link) => link.children[1].style.display = "block") : o.forEach((link) => link.children[1].style.display = "none");
-    for (i = 0; i < o.length; i++) {
-        (i === x) ? (o[i].children[1].style.display = "block") : '';
+    else {
+        if (links[x].children[1].style.display === "block") {
+            links.forEach((link) => link.children[1].style.display = "none");
+        } else {
+            links.forEach((link) => link.children[1].style.display = "none");
+            links[x].children[1].style.display = "block"
+        }
     }
 }
 //swipe function

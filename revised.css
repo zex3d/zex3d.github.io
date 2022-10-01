@@ -33,6 +33,7 @@ html {
     text-align: center;
     color: var(--light);
     padding: .5em;
+    opacity: .5;
     background: var(--dark);
     border-radius: .5rem;
     width: 48%;
@@ -116,6 +117,9 @@ nav>div>div>span {
     justify-content: space-between;
 }
 
+.end {
+}
+
 .jcc {
     justify-content: center;
 }
@@ -123,7 +127,6 @@ nav>div>div>span {
 .active {
     border-radius: .5rem;
     background: var(--dark);
-    padding-inline: 1rem;
     color: var(--light);
     fill: var(--light);
 }
@@ -166,6 +169,10 @@ a {
     fill: var(--dark);
     text-align: center;
     text-decoration: None;
+}
+
+.links {
+    padding-inline: .8rem;
 }
 
 #about div img {
