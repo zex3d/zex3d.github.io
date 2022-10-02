@@ -30,8 +30,9 @@ html {
 }
 
 #footer svg {
-    width: 1rem;
-    padding-inline-end: .2rem;
+    width: 2rem;
+    padding-inline-end: 1rem;
+    fill: var(--dark);
 }
 
 .expand {
@@ -325,7 +326,7 @@ a {
     padding-inline: .5em;
 }
 
-button,svg {
+button {
     background: none;
     fill: var(--dark);
     border: none;
