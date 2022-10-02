@@ -1,11 +1,7 @@
-function id(id) {
-    return document.getElementById(id)
-}
+function id(id) { return document.getElementById(id) }
 
-
-//remove it use less home page
-function hh() { document.getElementById('hh').style.display = 'none' }
-
+//remove it
+function hh() { id('hh').style.display = 'none' }
 
 // navigation bar code and active
 function pid(Page_id) {
@@ -21,18 +17,14 @@ function pid(Page_id) {
 function nid(nav_id) {
     var y = id("h_nav").getElementsByTagName("a");
     for (i = 0; i < y.length; i++) {
-        if (y[i].id === nav_id) {
-            (!id(nav_id).classList.contains("active")) ? id(nav_id).classList.add("active") : ''
-        } else {
-            id(y[i].id).classList.replace("active", "links");
-        }
+        (y[i].id === nav_id) ? ((!id(nav_id).classList.contains("active")) ? id(nav_id).classList.add("active") : '') : id(y[i].id).classList.replace("active", "links");
     }
 }
 
 
 function show(Page_id, nav_id) {
     pid(Page_id);
-    closeNav()
+    openNav("close", "open", "100%")
     nid(nav_id);
 }
 
@@ -106,17 +98,10 @@ documentElement.style.setProperty('--scrolltm', navht);
 
 
 //mobile navigation for menu
-function openNav() {
-    id("h_nav").style.left = "0%";
-    id("open").style.display = "none";
-    id("close").style.display = "flex";
-}
-
-
-function closeNav() {
-    id("h_nav").style.left = "100%";
-    id("close").style.display = "none";
-    id("open").style.display = "flex";
+function openNav(open, close, _) {
+    id("h_nav").style.left = _;
+    id(open).style.display = "none";
+    id(close).style.display = "flex";
 }
 
 
@@ -134,7 +119,7 @@ function time(id1) {
         (element[j].classList.contains("right")) ? element[j].classList.remove('right') : '';
         (element[j].classList.contains("left")) ? element[j].classList.remove('left') : '';
         var flag = "F";
-        const x = element[j].getAttribute("class").toString();
+        const x = element[j].getElementsByClassName('content')[0].getAttribute("class").toString();
         for (i = 0; i < list.length; i++) {
             (x.includes(list[i])) ? flag = "T" : '';
         }
@@ -150,8 +135,7 @@ function time(id1) {
 function expand(s, x) {
     const links = document.querySelectorAll(s);
     if (x == 'e' || x == 'c') {
-        (x === 'e') ? links.forEach((link) => link.children[1].style.display = "block") : '';
-        (x === 'c') ? links.forEach((link) => link.children[1].style.display = "none") : '';
+        (x === 'e') ? links.forEach((link) => link.children[1].style.display = "block") : links.forEach((link) => link.children[1].style.display = "none");
     }
     else {
         if (links[x].children[1].style.display === "block") {
@@ -162,17 +146,3 @@ function expand(s, x) {
         }
     }
 }
-//swipe function
-// let touchstartX = 0
-// let touchendX = 0
-// function chkdir() {
-//     (touchstartX > touchendX) ? alert('r') : alert('l')
-//         (touchstartX > touchendX) ? openNav() : closeNav()
-// }
-// document.addEventListener('touchstart', e => {
-//     touchstartX = e.changedTouches[0].screenX
-// })
-// document.addEventListener('touchend', e => {
-//     touchendX = e.changedTouches[0].screenX
-//     chkdir()
-// })

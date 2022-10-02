@@ -47,6 +47,7 @@ html {
 body {
     background-color: var(--light);
     color: var(--dark);
+    font-family: var(--bfont);
     padding: 0;
     margin: 0;
     text-align: justify;
@@ -111,6 +112,16 @@ nav>div>div>span {
 
 #contact {
     justify-content: space-evenly;
+}
+
+#contact span {
+    margin-block-start: 5rem;
+    position: absolute;
+    display: none;
+}
+
+#contact a:hover span {
+    display: block;
 }
 
 .jsb {
@@ -242,7 +253,7 @@ a {
     width: 0;
     z-index: 1;
     right: 2rem;
-    border: medium solid var(--active);
+    border: medium solid var(--mlight);
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent var(--mlight);
 }
@@ -252,10 +263,10 @@ a {
     content: " ";
     height: 0;
     position: absolute;
-    top: 22px;
+    top: 2rem;
     width: 0;
     z-index: 1;
-    left: 30px;
+    left: 2rem;
     border: medium solid var(--mlight);
     border-width: 10px 10px 10px 0;
     border-color: transparent var(--mlight) transparent transparent;
@@ -273,6 +284,21 @@ a {
     position: relative;
     border-radius: .5rem;
 }
+
+/* .Cube {
+    color: blueviolet;
+    fill: blueviolet;
+}
+
+.Code {
+    fill: brown;
+    color: brown;
+}
+
+.Mech {
+    color: darkgoldenrod;
+    fill: darkgoldenrod;
+} */
 
 .phead {
     display: flex;
@@ -298,9 +324,9 @@ button {
     background: none;
     fill: var(--dark);
     border: none;
-    padding-inline-end: 0;
+    padding: 0;
     margin: 0;
-    padding-inline-start: 1rem;
+    margin-inline-start: 1rem;
 }
 
 #loader,
@@ -447,7 +473,16 @@ section>img {
     transition: all 250ms linear;
 }
 
-@media (max-width: 800px) {
+#contact p {
+    margin: 0;
+}
+
+#home>img {
+    width: 100%;
+    border: none;
+}
+
+@media screen and (max-width: 800px) {
     #h_nav {
         display: flex;
         position: fixed;
@@ -464,8 +499,20 @@ section>img {
         transition: all 1s;
     }
 
+    #contact span {
+        margin-block-start: 3rem;
+    }
+
+    div#h_nav>span {
+        display: block;
+    }
+
     #end {
         display: flex;
+    }
+
+    button {
+        margin-inline-start: 0;
     }
 
     #contact {
