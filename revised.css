@@ -29,6 +29,11 @@ html {
     box-sizing: border-box;
 }
 
+#footer svg {
+    width: 1rem;
+    padding-inline-end: .2rem;
+}
+
 .expand {
     text-align: center;
     color: var(--light);
@@ -320,7 +325,7 @@ a {
     padding-inline: .5em;
 }
 
-button {
+button,svg {
     background: none;
     fill: var(--dark);
     border: none;
@@ -458,6 +463,10 @@ section a {
     bottom: 0;
     text-align: center;
     font-size: small;
+}
+
+#footer div {
+    align-items: center;
 }
 
 section>img {
