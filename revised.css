@@ -150,11 +150,69 @@ nav>div {
     width: 100%;
 }
 
-nav img {
+svg {
     width: 2rem;
     height: 2rem;
-    border-radius: 0.2em;
-    border: .15em solid var(--dark);
+    fill: var(--dark);
+    transition: all 1s linear;
+}
+
+#B2 {
+    animation: hideshow 4s ease-in-out infinite;
+}
+
+#B1,
+#B3 {
+    animation: blink 4s ease-in-out infinite;
+}
+
+@keyframes blink {
+    0% {
+        fill: var(--light);
+    }
+
+    50% {
+        fill: var(--mdark);
+    }
+
+    50% {
+        fill: var(--dark);
+    }
+
+    75% {
+        fill: var(--mlight);
+    }
+
+    100% {
+        fill: var(--light);
+    }
+}
+
+@keyframes hideshow {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    25% {
+        transform: rotateZ(-90deg);
+    }
+
+    50% {
+        transform: rotateZ(-180deg);
+    }
+
+    75% {
+        transform: rotateZ(-270deg);
+    }
+
+    100% {
+        transform: rotateZ(-360deg);
+    }
+}
+
+nav:hover>div>svg {
+    transform-origin: center;
+    transform: rotate(-90deg);
 }
 
 nav>div>span {
@@ -345,14 +403,35 @@ button {
 #loader {
     position: fixed;
     inset: 0;
+    font-family: var(--fontdec);
     text-align: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
 }
 
-#loader p {
-    font-size: 2rem;
+#loader>p {
+    font-size: 5rem;
+    margin: 0;
+}
+
+#loader>div>svg {
+    height: 25vw;
+    width: auto;
+    fill: var(--dark);
+}
+
+#B1,
+#B3 {
+    padding-block: 1rem;
+}
+
+#B1 {
+    margin-inline-end: 5rem;
+}
+
+#B3 {
+    margin-inline-start: 5rem;
 }
 
 #loader.fade,
