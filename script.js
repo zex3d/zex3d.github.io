@@ -36,6 +36,7 @@ show("home", "_home_link")
 //loading screen
 var loader = id('loader');
 var content = id('c-c');
+content.style.display = "none";
 function ready() {
     loader.classList.toggle('fade');
     content.classList.toggle('fade');
