@@ -386,7 +386,9 @@ a {
 .phead>div {
     padding-inline: .5em;
 }
-
+#c-c{
+    display :none
+}
 button {
     background: none;
     fill: var(--dark);
