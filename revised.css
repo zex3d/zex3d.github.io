@@ -153,8 +153,11 @@ nav>div {
 svg {
     width: 2rem;
     height: 2rem;
-    fill: var(--dark);
     transition: all 1s linear;
+}
+
+nav svg {
+    fill: var(--dark);
 }
 
 #B2 {

@@ -41,6 +41,7 @@ function ready() {
     loader.classList.toggle('fade');
     content.classList.toggle('fade');
     loader.style.display = "none";
+    content.style.display = "block";
 }
 
 
