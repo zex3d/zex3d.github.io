@@ -160,46 +160,6 @@ nav svg {
     fill: var(--dark);
 }
 
-#B2 {
-    animation: hideshow 4s ease-in-out infinite;
-}
-
-#B1,
-#B3 {
-    animation: blink 2s ease-in-out infinite;
-}
-
-@keyframes blink {
-    0%,100% {
-        fill: var(--light);
-    }
-    50% {
-        fill: var(--dark);
-    }
-}
-
-@keyframes hideshow {
-    0% {
-        transform: rotateZ(0deg);
-    }
-
-    25% {
-        transform: rotateZ(-90deg);
-    }
-
-    50% {
-        transform: rotateZ(-180deg);
-    }
-
-    75% {
-        transform: rotateZ(-270deg);
-    }
-
-    100% {
-        transform: rotateZ(-360deg);
-    }
-}
-
 nav:hover>div>svg {
     transform-origin: center;
     transform: rotate(-90deg);
@@ -373,9 +333,11 @@ a {
 .phead>div {
     padding-inline: .5em;
 }
-#c-c{
-    display :none
+
+#c-c {
+    display: none
 }
+
 button {
     background: none;
     fill: var(--dark);
@@ -402,13 +364,21 @@ button {
     flex-direction: column;
 }
 
+#loader>div {
+    padding-bottom: 2rem;
+}
+
+#loader>span {
+    animation: blink 1s ease-in-out infinite;
+}
+
 #loader>p {
-    font-size: 5rem;
+    font-size: 4rem;
     margin: 0;
 }
 
 #loader>div>svg {
-    height: 25vw;
+    height: 8rem;
     width: auto;
     fill: var(--dark);
 }
@@ -416,6 +386,47 @@ button {
 #B1,
 #B3 {
     padding-block: 1rem;
+    animation: blink 1s ease-in-out infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        color: var(--light);
+        fill: var(--light);
+    }
+
+    50% {
+        color: var(--dark);
+        fill: var(--dark);
+    }
+}
+
+#B2 {
+    animation: hideshow 4s ease-in-out infinite;
+}
+
+@keyframes hideshow {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    25% {
+        transform: rotateZ(-90deg);
+    }
+
+    50% {
+        transform: rotateZ(-180deg);
+    }
+
+    75% {
+        transform: rotateZ(-270deg);
+    }
+
+    100% {
+        transform: rotateZ(-360deg);
+    }
 }
 
 #B1 {
