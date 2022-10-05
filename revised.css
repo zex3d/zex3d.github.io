@@ -166,28 +166,15 @@ nav svg {
 
 #B1,
 #B3 {
-    animation: blink 4s ease-in-out infinite;
+    animation: blink 2s ease-in-out infinite;
 }
 
 @keyframes blink {
-    0% {
+    0%,100% {
         fill: var(--light);
     }
-
-    50% {
-        fill: var(--mdark);
-    }
-
     50% {
         fill: var(--dark);
-    }
-
-    75% {
-        fill: var(--mlight);
-    }
-
-    100% {
-        fill: var(--light);
     }
 }
 
