@@ -1,6 +1,6 @@
 function id(id) { return document.getElementById(id) }
 
-function hh() { document.querySelectorAll('#hh').style.display = 'none' } //hidden on click
+function hh() { id('hh').style.display = 'none' } //hidden on click
 
 // navigation bar code and active
 function pid(Page_id) {
