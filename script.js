@@ -12,6 +12,7 @@ function pid(Page_id) {
     }
 }
 
+//safe-side function for scroll class if fails
 function nid(nav_id) {
     var y = id("h_nav").getElementsByTagName("a");
     for (i = 0; i < y.length; i++) {
@@ -19,11 +20,11 @@ function nid(nav_id) {
     }
 }
 
+//display class and open nav in mobile view
 function show(Page_id, nav_id) {
     pid(Page_id);
-    openNav("close", "open", "100%")
+    openNav("close", "open", "100%");
     nid(nav_id);
-    console.log('HOME')
 }
 
 //loading screen
@@ -51,7 +52,6 @@ function changeLinkState() {
     while (--index && window.scrollY + 50 < sections[index].offsetTop) { }
     links.forEach((link) => link.classList.remove('active'));
     links[index].classList.add('active');
-    console.log(links[index])
 }
 changeLinkState();
 window.addEventListener('scroll', changeLinkState);
@@ -81,9 +81,13 @@ toggle.onclick = function () {
     localStorage.setItem('theme', targetTheme);
 }
 
-//new dynamic padding while scrolling
+//new dynamic padding  height while scrolling
 const navht = document.querySelector('nav').offsetHeight;
-documentElement.style.setProperty('--scrolltm', navht);
+try {
+    documentElement.style.setProperty('--scrolltm', navht);
+}
+catch (Reference) { console.error() }
+
 
 //mobile navigation for menu
 function openNav(open, close, _) {
@@ -141,4 +145,4 @@ function ready() {
 }
 
 //home page
-show("home","_home_link")
+show("home", "_home_link")
