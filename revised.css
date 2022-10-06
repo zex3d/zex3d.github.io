@@ -362,6 +362,8 @@ button {
     justify-content: center;
     display: flex;
     flex-direction: column;
+    z-index: 3;
+    background: var(--light);
 }
 
 #loader>div {
@@ -382,7 +384,6 @@ button {
     width: auto;
     fill: var(--dark);
 }
-
 #B1,
 #B3 {
     padding-block: 1rem;

@@ -1,7 +1,6 @@
 function id(id) { return document.getElementById(id) }
 
-//remove it
-function hh() { id('hh').style.display = 'none' }
+function hh() { document.querySelectorAll('#hh').style.display = 'none' } //hidden on click
 
 // navigation bar code and active
 function pid(Page_id) {
@@ -13,36 +12,29 @@ function pid(Page_id) {
     }
 }
 
-
 function nid(nav_id) {
     var y = id("h_nav").getElementsByTagName("a");
     for (i = 0; i < y.length; i++) {
-        (y[i].id === nav_id) ? ((!id(nav_id).classList.contains("active")) ? id(nav_id).classList.add("active") : '') : id(y[i].id).classList.replace("active", "links");
+        (y[i].id === nav_id) ? ((!id(nav_id).classList.contains("active")) ? id(nav_id).classList.add("active") : '') : id(y[i].id).classList.remove("active");
     }
 }
-
 
 function show(Page_id, nav_id) {
     pid(Page_id);
     openNav("close", "open", "100%")
     nid(nav_id);
+    console.log('HOME')
 }
-
-
-//home page
-show("home", "_home_link")
-
 
 //loading screen
 var loader = id('loader');
 var content = id('c-c');
-function ready() {
+function fire() {
     loader.classList.toggle('fade');
     content.classList.toggle('fade');
     loader.style.display = "none";
     content.style.display = "block";
 }
-
 
 // night dark and light mode preferance
 function cool(y, mode) {
@@ -50,7 +42,6 @@ function cool(y, mode) {
         y[i].id === mode ? id(y[i].id).style.display = "block" : id(y[i].id).style.display = "none";
     }
 }
-
 
 //scroll active setting up 
 const links = document.querySelectorAll('.links');
@@ -60,22 +51,20 @@ function changeLinkState() {
     while (--index && window.scrollY + 50 < sections[index].offsetTop) { }
     links.forEach((link) => link.classList.remove('active'));
     links[index].classList.add('active');
+    console.log(links[index])
 }
 changeLinkState();
 window.addEventListener('scroll', changeLinkState);
-
 
 //^mode switcher
 var toggle = id("dark_link");
 const y = id("dark_link").getElementsByTagName("svg");
 var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
 
-
 //default 
 if (storedTheme) {
     storedTheme === "dark" ? cool(y, "moon") : cool(y, "sun")
 }
-
 
 //toggle
 document.documentElement.setAttribute('data-theme', storedTheme)
@@ -92,11 +81,9 @@ toggle.onclick = function () {
     localStorage.setItem('theme', targetTheme);
 }
 
-
 //new dynamic padding while scrolling
 const navht = document.querySelector('nav').offsetHeight;
 documentElement.style.setProperty('--scrolltm', navht);
-
 
 //mobile navigation for menu
 function openNav(open, close, _) {
@@ -104,7 +91,6 @@ function openNav(open, close, _) {
     id(open).style.display = "none";
     id(close).style.display = "flex";
 }
-
 
 //time-Project
 function time(id1) {
@@ -133,6 +119,7 @@ function time(id1) {
         }
     }
 }
+
 function expand(s, x) {
     const links = document.querySelectorAll(s);
     if (x == 'e' || x == 'c') {
@@ -147,3 +134,11 @@ function expand(s, x) {
         }
     }
 }
+
+function ready() {
+    id("btnhome").innerHTML = "GO TO HOME PAGE"
+    id('loader').setAttribute("onclick", "fire()")
+}
+
+//home page
+show("home","_home_link")
