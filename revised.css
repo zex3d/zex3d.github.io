@@ -153,11 +153,11 @@ nav>div {
 svg {
     width: 2rem;
     height: 2rem;
-    transition: all 1s linear;
 }
 
-nav svg {
+nav>div>svg {
     fill: var(--dark);
+    transition: all 1s linear;
 }
 
 nav:hover>div>svg {
@@ -345,6 +345,11 @@ button {
     padding: 0;
     margin: 0;
     margin-inline-start: 1rem;
+    /* transition: all 1s linear; */
+}
+
+button svg:hover {
+    fill: var(--mdark);
 }
 
 #loader,
@@ -451,8 +456,7 @@ button {
     scroll-margin-top: var(--scrolltm, 3em);
 }
 
-a:hover,
-#dark_link:hover {
+a:hover {
     color: var(--mdark);
     fill: var(--mdark);
 }
